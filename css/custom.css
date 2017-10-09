@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css?family=Martel');
+@import url('https://fonts.googleapis.com/css?family=Cuprum');
+a {
+    font-family: 'Cuprum', sans-serif;
+}
+h1 {} h2 {} h3 [] h4 {
+    font-family: 'cuprum' !important;
+    font-weight: Bold;
+}
+p [] .fa {
+    font-size: 24px !important;
+}
+body {
+    background: linear-gradient(2deg, #f5f7fa, #ffffff);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 53% 0%
+        }
+        50% {
+            background-position: 48% 100%
+        }
+        100% {
+            background-position: 53% 0%
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 53% 0%
+        }
+        50% {
+            background-position: 48% 100%
+        }
+        100% {
+            background-position: 53% 0%
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 53% 0%
+        }
+        50% {
+            background-position: 48% 100%
+        }
+        100% {
+            background-position: 53% 0%
+        }
+    }
+}
+.c-hamburger--htra.is-active {} .c-hamburger--htra {} .c-hamburger {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.c-hamburger:focus {
+    outline: none;
+}
+.c-hamburger span {
+    display: block;
+    top: 22px;
+    left: 9px;
+    right: 9px;
+    height: 4px;
+    background: white;
+}
+.c-hamburger span::before,
+.c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: "";
+}
+.c-hamburger span::before {
+    top: -10px;
+}
+.c-hamburger span::after {
+    bottom: -10px;
+}
+.c-hamburger--htra span {
+    transition: transform 0.3s;
+}
+.c-hamburger--htra span::before {
+    transform-origin: top left;
+    transition: transform 0.3s, width 0.3s, top 0.3s;
+    z-index: 1;
+}
+.c-hamburger--htra span::after {
+    transform-origin: bottom left;
+    transition: transform 0.3s, width 0.3s, bottom 0.3s;
+    z-index: 1;
+}
+/* active state, i.e. menu open */
+
+.c-hamburger--htra.is-active {} .c-hamburger--htra.is-active span {
+    transform: rotate(180deg);
+}
+.c-hamburger--htra.is-active span::before,
+.c-hamburger--htra.is-active span::after {
+    width: 50%;
+}
+.c-hamburger--htra.is-active span::before {
+    top: 0;
+    transform: translateX(-4px) translateY(2px) rotate(-45deg);
+}
+.c-hamburger--htra.is-active span::after {
+    bottom: 0;
+    transform: translateX(-4px) translateY(-2px) rotate(45deg);
+}
+header {
+    position: relative;
+    height: 0px;
+    z-index: 1;
+    margin: 0, 0, 0, 0;
+    padding: 0, 0, 0, 0;
+}
+header h1 {
+    color: white;
+}
+svg {
+    position: absolute;
+    padding: 0, 0, 0, 0;
+    width: 100%;
+    height: 100px;
+}
+#curve {
+    transition: 0.5s;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+    background: linear-gradient(154deg, #000000, #67167f);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 54%
+        }
+        50% {
+            background-position: 100% 47%
+        }
+        100% {
+            background-position: 0% 54%
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 54%
+        }
+        50% {
+            background-position: 100% 47%
+        }
+        100% {
+            background-position: 0% 54%
+        }
+    }
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 0% 54%
+        }
+        50% {
+            background-position: 100% 47%
+        }
+        100% {
+            background-position: 0% 54%
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 54%
+        }
+        50% {
+            background-position: 100% 47%
+        }
+        100% {
+            background-position: 0% 54%
+        }
+    }
+}
+.sidenav a {
+    padding: 8px 10px 5px 0px !important;
+    text-decoration: none;
+    font-size: 39px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    font-family: Cuprum;
+}
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-right: 10px;
+}
+.closebtn {
+    font-size: 50px !important;
+    right: 2px !important;
+}
+#main {
+    transition: margin-right .5s;
+}
+.open {
+    font-size: 50px;
+    cursor: pointer;
+    text-align: right;
+    z-index: 1;
+    right: 10;
+    top: 10;
+    COLOR: WHITE;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 5px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+label {
+    color: white;
+    text-align: center;
+}
+.fb-connect {
+    height: 33px;
+    margin-right: 16px;
+}
+object {
+    margin-top: 20px;
+}
+#login {
+    border-top: .01px white solid;
+}
+#logo {
+    height: 45px;
+    left: 5px;
+    top: 8px;
+    position: fixed;
+    z-index: 1;
+    transition: .5s;
+}
+#mobile-text {
+    display: none;
+    text-align: center;
+    margin-top: -190px;
+}
+@media only screen and (max-width: 500px) {
+    #mobile-text {
+        display: inline;
+        text-align: center;
+        color: #1d011e;
+    }
+    object {
+        margin-top
+    }
+    #animation {
+        max-height: 470px;
+        overflow: hidden;
+    }
+    #mysidenav {
+        font-family: Martel;
+    }
+    @media only screen and (min-width: 490px) {
+        #social {
+            opacity: 1;
+            transition: .5s;
+        }
+    }
+    #social {
+        position: fixed;
+        top: 450px;
+        opacity: 0;
+        transition: .5s;
+    }
+}
+#social {
+    position: fixed;
+    top: 400px;
+}
+#social ul {
+    padding: 0px;
+    -webkit-transform6 translate(-250px, 0);
+    -moz-transform: translate(-260px, 0);
+    -ms-transform: translate(-260px, 0);
+    -o-transform: translate(-260px, 0);
+    transform: translate(-260px, 0);
+}
+#social ul li {
+    display: block;
+    margin: 10px;
+    background: #1d011e;
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+#social ul li:hover {
+    -webkit-transform: translate(110px, 0);
+    -moz-transform: translate(110px, 0);
+    -ms-transform: translate(110px, 0);
+    -o-transform: translate(110px, 0);
+    transform: translate(110px, 0);
+    background: rgba(255, 255, 255, 0.4);
+}
+#social ul li:hover a {
+    color: #000;
+}
+#social ul li:hover i {
+    color: #fff;
+    background: #1d011e;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+#social ul li i {
+    margin-left: 10px;
+    color: #000;
+    background: #fff;
+    padding: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    background: #ffffff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.icon-button {
+    text-align: center;
+    display: inline;
+    float: left;
+    background-color: white;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 3.6rem;
+}
+/* Circle */
+
+.icon-button span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 0;
+}
+.icon-button:hover span {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    margin: -1.8rem;
+}
+.twitter span {
+    background-color: #4099ff;
+}
+.instagram span {
+    background-color: #954b10;
+}
+.facebook span {
+    background-color: #3B5998;
+}
+.google-plus span {
+    background-color: #fffe03;
+}
+/* Icons */
+
+.icon-button i {
+    background: none;
+    color: black;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 3.6rem;
+    z-index: 10;
+    font-size: 20px;
+}
+.icon-button .instagram {
+    color: #954b10;
+}
+.icon-button .icon-twitter {
+    color: #4099ff;
+}
+.icon-button .icon-facebook {
+    color: #3B5998;
+}
+.icon-button .icon-google-plus {
+    color: #fffe03;
+}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus .icon-button:hover .instagram {
+    color: white;
+}
+#solutionshead {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-family: cuprum;
+    margin-bottom: 0px;
+    text-align: center;
+}
+@media only screen and (max-width: 650px) {
+    #solutionshead {
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+}
+.container {
+    padding: 0px;
+}
+.Weoperate {
+    text-align: center;
+}
+.next-button {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 610px) {
+    .weoperate {
+        margin-top: -160px;
+        font-size: 20px;
+        margin-top: -6.5em !important;
+    }
+}
+.Undertable {} .homepage-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.mainheader {
+    font-size: 2.8rem;
+    position: absolute;
+    bottom: 135px;
+    width: 80%;
+    margin: 0 auto;
+}
+.set-appointment {
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 70px;
+}
+.set-appointment button {
+    background-color: lightgreen;
+}
+#show-next-page, #show-step-3 {
+    cursor: pointer;
+    font-size: 80px;
+    margin-right: 15px;
+    opacity: 0.3;
+}
+.table-animation-content {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+}
+.table-animation-content>div {
+    width: 80%;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+    .mainheader {
+        bottom: 135px;
+    }
+}
+@media only screen and (min-width: 550px) {
+    .Undertable h5 {
+        font-size: 2rem;
+    }
+    .Undetable h3 {
+        font-size: 3.2rem;
+    }
+    #step3{
+      margin-top: 50px;
+    }
+}
+#step3{
+  display: none;
+  margin-top: 20px;
+}
+#step3 h3{
+  text-align: center;
+}

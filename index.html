@@ -1,0 +1,214 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/transformation.js" type="text/javascript"></script>
+<script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<!DOCTYPE html>
+<html lang="en">
+  
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=cuprum">
+   <head>
+      <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta charset="utf-8">
+      <title>MRW Creations</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <!-- CSS
+         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+      <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/skeleton.css">
+      <link rel="stylesheet" href="css/style.min.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/animate.css-master/animate.min.css">
+      <link rel="stylesheet" href="css/animate.css-master/animate.css">
+      <link rel="stylesheet" href="css/hover.css">
+      <link rel="stylesheet" type="text/css" href="css/carousel.css" rel="stylesheet" type="text/css" >
+      <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="icon" type="image/png" href="images/favicon.png">
+   </head>
+   <body>
+      <header id="curve">
+         <div id="logodiv" class="animated fadeinleft">
+            <img src="/images/logo.gif" id="logo" Class="hvr-forward">
+         </div>
+         <div id="hamburger">
+            <img class="animated fadeinright" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0;"
+               id="right-curve">
+            <a class="c-hamburger c-hamburger--htra open hvr-backward" onclick="openNav()" style="position:fixed;">
+            <span></span>
+            </a>
+         </div>
+      </header>
+      <div id="mySidenav" class="sidenav" style="position:fixed;">
+         <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
+         <a href="#" class="hvr-backward">About</a>
+         <a href="#" class="hvr-backward">Clients</a>
+         <a href="Solutions.html" class="hvr-backward">Solutions</a>
+         <br>
+         <div class="social" style="margin-left: 20px;">
+            <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
+            <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
+            <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i><span></span></a>
+            <a href="https://www.snapchat.com/add/mrwcreations" class="icon-button google-plus"><i class="fa fa-snapchat-ghost"></i><span></span></a>
+         </div>
+         <div class="animated fadeinright" id="login" style="vertical-align: bottom; margin-top: 60px;">
+            <br>
+            <label><b>Client Entrance</b></label>
+            <input style=" margin-right:15px; float:right;" type="text" placeholder="Client" name="uname" required>
+            <input  style=" margin-right:15px;  float:right;" type="password" placeholder="Passcode" name="psw" required>
+            <button type="submit" class="hvr-forward" style="float:right; margin-right:55px; color:white;">Check In</button>
+            <br>
+            <a class="hvr-forward"><input style="float:right; padding-right: 32px;"  class="fb-connect" type="image" src="/images/fb.png" >
+            <a/>
+         </div>
+      </div>
+      <!-- Navigation
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <!-- Primary Page Layout
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="twelve columns">
+        <div id="city-animation">
+          <div class="heart animated infinite pulse"> 
+            <object id="EdgeID" 
+               type="text/html" 
+               width="100%" height="75%" 
+               data-dw-widget="Edge" 
+               data="/animations/city.html">
+            </object>
+          </div>  
+        <div class="homepage-content">
+          <h5 class="mainheader">
+            We Operate on Parallel Perspectives of Artistry, Design &amp; Development
+          </h5>    
+          <div class="set-appointment">
+            <button >Button element</button>
+          </div>
+        <div class="animated infinite pulse next-button">
+          <i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i>
+        </div>
+        </div>
+        </div>
+        <div id="table-animation" style="display: none;"> 
+          <div class="heart animated infinite pulse"> 
+            <object id="EdgeID" 
+               type="text/html" 
+               width="100%" height="60%" 
+               data-dw-widget="Edge" 
+               data="/animations/table.html">
+            </object>
+          </div>  
+          <div class="row table-animation-content">
+            <div class="animated fadeinup">
+              <div style="text-align: center;">
+                <div  class="Undertable" >
+                  <div style="margin:10px;">
+                    <h3>
+                      Developing Brands
+                    </h3>
+                    <h5> 
+                      Through a combination of digital marketing, original esthetics and identity development we make your company more recognizable, memorable and increase brand loyalty.
+                    </h5>
+                    <button>Button element</button>
+                    <div style="text-align: center;">
+                      <i class="fa fa-angle-double-down" id="show-step-3" style="font-size: 80px; opacity: .3;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="step3">
+          <object data="ad.html" type="" width="100%"></object>
+          <h3>Our Clients</h3>
+          <object data="carousel.html" type="" width="100%"></object>
+      </div>
+
+      <nav Id="social">
+      <ul>
+      <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
+      <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
+      <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
+      </ul>
+   </body>
+   <script>
+      function openNav() {
+        document.getElementById("social").style.opacity = "1";
+        document.getElementById("mySidenav").style.width = "225px";
+        document.getElementById("curve").style.marginRight = "225px";
+        document.getElementById("right-curve").style.marginRight = "225px";
+        document.getElementById("right-curve").style.transition = "0.5s";
+        document.getElementById("logo").style.opacity = "0";
+        document.getElementByClassName("open").style.marginRight = "225px";        
+      }
+      
+      function closeNav() {
+        document.getElementById("social").style.opacity = "0";
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("curve").style.marginRight= "0";
+        document.getElementById("logo").style.opacity = "1";
+        document.getElementById("right-curve").style.marginRight = "0";        
+      }
+   </script>
+   <script>
+     (function() {
+     
+       "use strict";
+     
+       var toggles = document.querySelectorAll(".c-hamburger");
+     
+       for (var i = toggles.length - 1; i >= 0; i--) {
+         var toggle = toggles[i];
+         toggleHandler(toggle);
+       };
+     
+       function toggleHandler(toggle) {
+         toggle.addEventListener( "click", function(e) {
+           e.preventDefault();
+           (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("");
+           $(".social").hide();                                                                                                            
+         });
+       }
+     
+     })();
+     
+     
+     if($(window).width() < 500){ $(document).ready(function(){$("#mobile-text").hide().delay(4200).fadeIn(500);})}
+     else {};
+  </script>
+  <script>
+     $(document).ready(function(){$("#logodiv, .Weoperate, img, .c-hamburger").hide().delay(4200).fadeIn(1000);});
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        infinite: true,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
+  </script>
+</html>

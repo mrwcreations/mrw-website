@@ -1,0 +1,193 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Schedule a meeting</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetime-picker.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<style>
+		body{
+
+		}
+		.step1, .step2{
+			width: 100%;
+			margin: 0 auto;
+			padding-top: 50px;
+		}
+		.title, .title-help{
+			
+			margin: 0 auto;
+		}
+		#calendar{
+			margin: 0 auto;	
+			width: 50%;
+		}
+		.next{
+			width: 50%;
+			padding-top: 10px;
+			margin: 0 auto;
+		}
+		form{
+			width: 100%;
+			margin: 0 auto;
+		}
+		form label{
+			color: black;
+		}
+		.phone, .address, .email{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="step1">
+			<h1 class="title">1. Choose a date:</h1>
+			<div id="calendar">
+			</div>
+			<div class="next">
+				<button class="btn btn-primary">Next</button>
+			</div>
+		</div>
+		<div class="step2">
+			<form class="contact-form form-horizontal" role="form">
+				<legend>
+					<h1 class="title">Schedule a Meeting</h1>
+					<div class="title-help"><small class="text-muted">Go ahead, pick a time that works and we will take care of the rest.</small></div>
+				</legend>
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="dtp_input1" class="col-md-2 control-label">Select a Date &amp; time</label>
+	                <div class="input-group date form_datetime col-md-5" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+	                    <input class="form-control" size="16" type="text" value="" readonly>
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+	                </div>
+					<input type="hidden" id="dtp_input1" value="" /><br/>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-md-2 control-label">Name</label>
+					<div class="input-group col-md-5">
+						<input type="text" class="form-control" size="16"/><br/>
+					</div>
+				</div>
+				 <div class="form-group meeting-type">
+				 	<label for="meetingType" class="col-md-2 control-label">Meeting Type</label>
+				 	<div class="input-group col-md-5">
+						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-phone">Phone</label>
+						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-email">Email</label>
+						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-person">In-Person</label>
+					</div><br/>
+				 </div>
+				<div class="form-group email">
+				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Email address</label>
+				    <div class="input-group col-md-5">
+				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				    </div>
+				 </div>
+				 <div class="form-group phone">
+				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Phone</label>
+				    <div class="input-group col-md-5">
+				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone">
+				    	<small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+				    </div>
+				 </div>
+				 <div class="form-group address">
+				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Address</label>
+				    <div class="input-group col-md-5">
+				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter address">
+				    	<small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone else.</small>
+				    </div>
+				 </div>
+				 <div class="form-group">
+				 	<label for="" class="col-md-2 control-label"></label>
+				 	<div class="g-recaptcha col-md-5" data-sitekey="6LeimzMUAAAAAEaRQou6AWXNaOYez4I2zlJcPVJ_"></div>
+				 </div>
+				 <div class="next">
+				 	<button class="btn">Clear</button>
+				 	<button  type="submit" class="submit btn btn-primary">Submit</button>
+				 </div>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var calendar = $('#calendar').fullCalendar({
+	    // put your options and callbacks here
+	    	selectable: true,
+	    	selectHelper: true,
+	    	select: function (start, end, allDay) {
+                var title = prompt('Event Title:'+start+' '+end);
+                if (title) {
+                    calendar.fullCalendar('renderEvent',
+                        {
+                            title: title,
+                            start: start,
+                            end: end,
+                            allDay: allDay
+                        },
+                        true // make the event "stick"
+                    );
+                    //$('.fc-day-content').html('<div style="position: relative; height: 0px;">xxx</div>');
+                }
+                calendar.fullCalendar('unselect');
+            }
+		});
+		$(".step1").hide();
+		$(".next button").on('click', function(e){
+			e.preventDefault();
+			$(".step1").hide();
+			$(".step2").fadeIn("slow");
+		});
+		$(".next .back").on('click', function(e){
+			e.preventDefault();
+			$(".step2").hide();
+			$(".step1").fadeIn("slow");
+		})
+		$(".contact-form").on('change', function(){
+			if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-phone"){
+				$('.phone').show();
+				$('.email').hide();
+				$('.address').hide();
+			} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-email"){
+				$('.email').show();
+				$('.phone').hide();
+				$('.address').hide();
+			} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-person"){
+				$('.address').show();
+				$('.phone').hide();
+				$('.email').hide();
+			}
+		});
+		$('.form_datetime').datetimepicker({
+	        //language:  'fr',
+	        weekStart: 1,
+	        todayBtn:  1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			forceParse: 0,
+	        showMeridian: 0
+	    });
+	    $(".submit").on('click', function(e){
+	    	e.preventDefault();
+	    	if(grecaptcha.getResponse()){
+	    		console.log("Successful");
+	    	}
+	    	else{
+	    		console.log("verify catcha");
+	    	}
+	    })
+	</script>
+</body>
+</html>
