@@ -52,7 +52,7 @@
          <a href="#" class="hvr-backward">Clients</a>
          <a href="Solutions.html" class="hvr-backward">Solutions</a>
          <br>
-         <div class="social" style="margin-left: 20px;">
+         <div class="social">
             <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
             <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
             <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i><span></span></a>
@@ -61,11 +61,13 @@
          <div class="animated fadeinright" id="login" style="vertical-align: bottom; margin-top: 60px;">
             <br>
             <label><b>Client Entrance</b></label>
-            <input style=" margin-right:15px; float:right;" type="text" placeholder="Client" name="uname" required>
-            <input  style=" margin-right:15px;  float:right;" type="password" placeholder="Passcode" name="psw" required>
+            <div class="clientlogin">
+            <input type="text" placeholder="Client" name="uname" required>
+            <input  type="password" placeholder="Passcode" name="psw" required>
             <button type="submit" class="hvr-forward" style="float:right; margin-right:55px; color:white;">Check In</button>
             <br>
-            <a class="hvr-forward"><input style="float:right; padding-right: 32px;"  class="fb-connect" type="image" src="/images/fb.png" >
+            <a class="hvr-forward"><input style="float:right; padding-right: 32px;"  class="fb-connect" type="image" src="fb.png" >
+            </div>
             <a/>
          </div>
       </div>
@@ -84,53 +86,55 @@
             </object>
           </div>  
         <div class="homepage-content">
-          <h5 class="mainheader">
-            We Operate on Parallel Perspectives of Artistry, Design &amp; Development
+          <h5 class="mainheader" >
+            Multi-Disiplinary <br class="Breaker">Creative Agency
+            <p class="basedinmnpls">Based in Minneapolis, MN.</p>
           </h5>    
-          <div class="set-appointment">
-            <button >Button element</button>
+            <div class="set-appointment">
+            <div class="hvr-bob">
+            <button >Make an Appointment</button>
           </div>
-        <div class="animated infinite pulse next-button">
-          <i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i>
+          </div>
+        <div class="animated infinite pulse next-button ">
+          <a id="show-next-page"><i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i></a>
         </div>
         </div>
         </div>
-        <div id="table-animation" style="display: none;"> 
-          <div class="heart animated infinite pulse"> 
-            <object id="EdgeID" 
-               type="text/html" 
-               width="100%" height="60%" 
-               data-dw-widget="Edge" 
-               data="/animations/table.html">
-            </object>
-          </div>  
-          <div class="row table-animation-content">
-            <div class="animated fadeinup">
-              <div style="text-align: center;">
-                <div  class="Undertable" >
-                  <div style="margin:10px;">
-                    <h3>
-                      Developing Brands
-                    </h3>
-                    <h5> 
-                      Through a combination of digital marketing, original esthetics and identity development we make your company more recognizable, memorable and increase brand loyalty.
-                    </h5>
-                    <button>Button element</button>
-                    <div style="text-align: center;">
-                      <i class="fa fa-angle-double-down" id="show-step-3" style="font-size: 80px; opacity: .3;"></i>
-                    </div>
+      <div id="table-animation" style="display: none;"> 
+        <div class="heart animated"> 
+          <object id="EdgeID" 
+             type="text/html" 
+             width="100%" height="60%" 
+             data-dw-widget="Edge" 
+             data="/animations/table.html">
+          </object>
+        </div>  
+        <div class="row table-animation-content">
+          <div class="animated fadeinup">
+            <div style="text-align: center;">
+              <div  class="Undertable" >
+                <div style="margin:10px;">
+                  <h3>
+                    Developing Brands
+                  </h3>
+                  <h5> 
+                    Through a combination of digital marketing, original esthetics and identity development we make your company more recognizable, memorable and increase brand loyalty.
+                  </h5>
+                  <button class="secpagebutton">Button element</button>
+                  <div style="text-align: center;">
+                    <i class=" secnextpage fa fa-angle-double-down"></i>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="step3">
-          <object data="ad.html" type="" width="100%"></object>
+      </div>    
+      <div id="step3">
+          <object data="ad.html" type="" width="100%" height="70%"></object>
           <h3>Our Clients</h3>
           <object data="carousel.html" type="" width="100%"></object>
       </div>
-
       <nav Id="social">
       <ul>
       <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
@@ -184,7 +188,7 @@
      else {};
   </script>
   <script>
-     $(document).ready(function(){$("#logodiv, .Weoperate, img, .c-hamburger").hide().delay(4200).fadeIn(1000);});
+     $(document).ready(function(){$("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);});
   </script>
   <script type="text/javascript">
     $(document).ready(function(){

@@ -4,21 +4,21 @@
 	<title>Schedule a meeting</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/css/bootstrap-datepicker.css">
 
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="/css/custom.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-datetime-picker.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap-datetime-picker.min.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<style>
 		body{
-
+			font-family: 'Cuprum', sans-serif;
 		}
 		.step1, .step2{
 			width: 100%;
@@ -52,19 +52,19 @@
 </head>
 <body>
 	<div class="container">
-		<div class="step1">
+		<!-- <div class="step1">
 			<h1 class="title">1. Choose a date:</h1>
 			<div id="calendar">
 			</div>
 			<div class="next">
 				<button class="btn btn-primary">Next</button>
 			</div>
-		</div>
+		</div> -->
 		<div class="step2">
 			<form class="contact-form form-horizontal" role="form">
 				<legend>
 					<h1 class="title">Schedule a Meeting</h1>
-					<div class="title-help"><small class="text-muted">Go ahead, pick a time that works and we will take care of the rest.</small></div>
+				<div class="title-help"><small class="text-muted">Go ahead, pick a time that works and we will take care of the rest.</small></div>
 				</legend>
 				<div class="form-group" style="margin-top: 20px;">
 					<label for="dtp_input1" class="col-md-2 control-label">Select a Date &amp; time</label>
@@ -79,6 +79,12 @@
 					<label for="" class="col-md-2 control-label">Name</label>
 					<div class="input-group col-md-5">
 						<input type="text" class="form-control" size="16"/><br/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-md-2 control-label">Description</label>
+					<div class="input-group col-md-5">
+						<textarea name="description" class="form-control" cols="10" rows="5"></textarea><br/>
 					</div>
 				</div>
 				 <div class="form-group meeting-type">
