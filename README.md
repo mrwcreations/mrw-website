@@ -4,7 +4,7 @@
 
 **Contact Info:**
 
-Email: [info@mrwcreations.com](malto:info@mrwcreations.com)  
+Email: [info@mrwcreations.com](info@mrwcreations.com)  
 Phone: +1-(612)-643-0981  
 
 &copy; 2016-17 [MRW Creations](https://www.mrwcreations.org)
