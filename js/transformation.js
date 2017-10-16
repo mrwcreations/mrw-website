@@ -1,6 +1,18 @@
-$(window).bind('mousewheel', scrollEvent);
-$(window).bind('touchstart', touchStart);
-$(window).bind('touchend', touchEnd);
+var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+
+if (window.attachEvent) //if IE (and Opera depending on user setting)
+    window.attachEvent("on"+mousewheelevt, function(e){scrollEvent(e)})
+else if (window.addEventListener) //WC3 browsers
+    window.addEventListener(mousewheelevt, function(e){scrollEvent(e)}, false)
+
+// $(window).on("on"+mousewheelevt, parent.scrollEvent);
+// $(window).on('touchstart', parent.touchStart);
+// $(window).on('touchend', parent.touchEnd);
+
+
+// $(window).on('mousewheel', scrollEvent);
+// $(window).on('touchstart', touchStart);
+// $(window).on('touchend', touchEnd);
 $(document).ready(function(){
   $("#show-next-page").on('click', function(e){
     e.preventDefault();
@@ -17,33 +29,53 @@ function go_down(){
     setTimeout(function(){
       $("#city-animation").hide();
       $("#step3").hide();
-      $("#table-animation").show();
-    }, timout_interval);
+      $("#step4").hide();
+      $("#table-animation").fadeIn(1000);
+    }, timout_interval*2);
     setTimeout(function(){}, timout_interval*2);
   } else if($("#table-animation").is(":visible")){
+    setTimeout(function(){
+      $("#table-animation").hide()
+      $("#city-animation").hide();
+      $("#step4").hide();
+      $("#step3").fadeIn(1000);
+    }, timout_interval*2);
+    setTimeout(function(){}, timout_interval*2);
+  } else if($("#step3").is(":visible")){
     $("#table-animation").hide();
     $("#city-animation").hide();
-    $("#step3").fadeIn(1000);
+    $("#step3").hide();
+    $("#step4").fadeIn(1000);
   }
 }
 function go_up(){
+  if($("#step4").is(":visible")){
+    setTimeout(function(){
+      $("#city-animation").hide();
+      $("#table-animation").hide();
+      $("#step4").hide();
+      $("#step3").fadeIn(1000);
+    }, timout_interval*2);
+  }
   if($("#step3").is(":visible")){
     setTimeout(function(){
       $("#city-animation").hide();
       $("#step3").hide();
-      $("#table-animation").show();
-    }, timout_interval);
+      $("#step4").hide();
+      $("#table-animation").fadeIn(1000);
+    }, timout_interval*2);
   } else if($("#table-animation").is(":visible")){
-    $("#table-animation").hide();
-    $("#step3").hide();
-    $("#city-animation").show();
+      $("#table-animation").hide();
+      $("#step3").hide();
+      $("#step4").hide();
+      $("#city-animation").fadeIn(1000);
   }
 }
 function hide_city(){
   if($("#city-animation").is(":visible")){
     console.log("hiding city animation");
     $("#city-animation").hide();
-    $("#table-animation").show();
+    $("#table-animation").fadeIn(10000);
   }
 }
 function hide_table(){
@@ -54,10 +86,13 @@ function hide_table(){
 }
 function scrollEvent(e){
   //$(window).bind('mousewheel', function(e){
-  if(e.originalEvent.wheelDelta < -50) {
+  var evt = window.event || e;
+  console.log(evt.detail);
+  var delta = evt.detail? evt.detail*(-4) : evt.wheelDelta;
+  if(delta< -50) {
     go_down();
     console.log('Down');
-  }else if(e.originalEvent.wheelDelta > 50) {
+  }else if(delta > 50) {
    //scroll up
     go_up();
     console.log("Up");
