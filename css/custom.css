@@ -602,7 +602,7 @@ button:hover {
 }
 #step3 {
     display: none;
-    margin-top: 20px;
+    margin-top: 65px;
 }
 #step3 h3 {
     text-align: center;
@@ -622,4 +622,9 @@ button:hover {
 }
 .secpagebutton {} .clientlogin {
     margin-left: 10px;
+}
+#step4{
+    width: 80%;
+    margin: 0 auto;
+    display: none;
 }

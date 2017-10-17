@@ -6,5 +6,5 @@ else if (window.addEventListener) //WC3 browsers
     window.addEventListener(mousewheelevt, function(e){parent.scrollEvent(e)}, false)
 
 // $(window).on("on"+mousewheelevt, parent.scrollEvent);
-// $(window).on('touchstart', parent.touchStart);
-// $(window).on('touchend', parent.touchEnd);
+$(window).on('touchstart', parent.touchStart);
+$(window).on('touchend', parent.touchEnd);
