@@ -1,8 +1,11 @@
 # Ignore SFTP Configuration file
 sftp-config.json
+# Ignore file system files
 /**/.DS_Store
 *.DS_Store
+# Ignore gulp build file
 gulpfile.js
+# Ignore gulp build directories
 /js/min/
 /css/min/
 /dist/
