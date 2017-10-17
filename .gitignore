@@ -5,3 +5,4 @@ sftp-config.json
 gulpfile.js
 /js/min/
 /css/min/
+/dist/
