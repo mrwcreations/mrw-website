@@ -1,5 +1,6 @@
 # Ignore SFTP Configuration file
 sftp-config.json
+/**/.DS_Store
 *.DS_Store
 gulpfile.js
 /js/min/
