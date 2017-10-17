@@ -1,8 +1,4 @@
-$(document).ready(function(){
-  // Code to hide all other divs until animation loads
-  $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
-  setTimeout(function(){}, 4000);
-  "use strict";
+"use strict";
 
   var toggles = document.querySelectorAll(".c-hamburger");
 
@@ -19,7 +15,8 @@ $(document).ready(function(){
      $(".social").hide();                                                                                                            
    });
   }
-
+  $(".c-hamburger--htra open").on('click', openNav);
+  $(".closebtn").on('click', closeNav);
   // Open navbar
   function openNav() {
     document.getElementById("social").style.opacity = "1";
@@ -42,27 +39,8 @@ $(document).ready(function(){
     document.getElementById("right-curve").style.marginRight = "0";        
   }
 
-
-  // Customer logos slider library initialization
-  $('.customer-logos').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    arrows: false,
-    infinite: true,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 520,
-      settings: {
-        slidesToShow: 3
-      }
-    }]
-  });
+$(document).ready(function(){
+  // Code to hide all other divs until animation loads
+  $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
+  setTimeout(function(){}, 4000);
 });
