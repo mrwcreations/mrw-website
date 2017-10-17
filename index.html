@@ -122,7 +122,7 @@
                   </h5>
                   <button class="secpagebutton">Button element</button>
                   <div style="text-align: center;">
-                    <i class=" secnextpage fa fa-angle-double-down"></i>
+                    <i class=" secnextpage fa fa-angle-double-down" id="show-step-3"></i>
                   </div>
                 </div>
               </div>
@@ -131,9 +131,12 @@
         </div>
       </div>    
       <div id="step3">
-          <object data="ad.html" type="" width="100%" height="70%"></object>
+         <!--  <object data="ad.html" type="" width="100%" height="70%"></object> -->
           <h3>Our Clients</h3>
           <object data="carousel.html" type="" width="100%"></object>
+      </div>
+      <div id="step4">
+        <object data="ad.html" type="" width="100%" height="100%"></object>
       </div>
       <nav Id="social">
       <ul>
@@ -154,7 +157,9 @@
       }
       
       function closeNav() {
-        document.getElementById("social").style.opacity = "0";
+        if($(window).width() <= 490){
+           document.getElementById("social").style.opacity = "0";
+        }
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("curve").style.marginRight= "0";
         document.getElementById("logo").style.opacity = "1";
@@ -188,7 +193,10 @@
      else {};
   </script>
   <script>
-     $(document).ready(function(){$("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);});
+     $(document).ready(function(){
+        $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
+        setTimeout(function(){}, 4000);
+      });
   </script>
   <script type="text/javascript">
     $(document).ready(function(){
