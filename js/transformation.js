@@ -79,7 +79,8 @@ function hide_city(){
   if($("#city-animation").is(":visible")){
     console.log("hiding city animation");
     $("#city-animation").hide();
-    $("#table-animation").fadeIn(10000);
+    $("#table-animation").css('display', 'block');
+    $("#table-animation").css('opacity', '1');
   }
 }
 function hide_table(){
@@ -129,7 +130,8 @@ $(document).ready(function(){
       $("#city-animation").hide();
       $("#step3").hide();
       $("#step4").hide();
-      $("#table-animation").fadeIn(1000);
+      $("#table-animation").css('display', 'block');
+      $("#table-animation").css('opacity', '1');
     }
     if(hash.indexOf("#step3") >= 0){
       $("#table-animation").hide()
@@ -155,7 +157,8 @@ $(document).ready(function(){
     $("#city-animation").hide();
     $("#step3").hide();
     $("#step4").hide();
-    $("#table-animation").fadeIn(1000);
+    $("#table-animation").css('display', 'block');
+    $("#table-animation").css('opacity', '1');
   }
   if(link.indexOf("#step3") >= 0){
     $("#table-animation").hide()
