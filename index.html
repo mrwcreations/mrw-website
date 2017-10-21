@@ -2,10 +2,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/js/transformation.js" type="text/javascript"></script>
 <script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-  
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=cuprum">
    <head>
       <!-- Basic Page Needs
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -31,48 +30,54 @@
       <!-- Favicon
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <link rel="icon" type="image/png" href="images/favicon.png">
-      <script type="text/javascript" src="/js/custom.js"></script>
    </head>
    <body>
+      <!-- Header
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <header id="curve">
          <div id="logodiv" class="animated fadeinleft">
-            <img src="/images/logo.gif" id="logo" Class="hvr-forward">
+            <img src="/images/header.gif" id="logo" Class="hvr-forward">
          </div>
          <div id="hamburger">
             <img class="animated fadeinright" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0;"
                id="right-curve">
-            <a class="c-hamburger c-hamburger--htra open hvr-backward" onclick="openNav()" style="position:fixed;">
-            <span></span>
+            <a class="c-hamburger c-hamburger--htra open hvr-grow" onclick="openNav()" style="position:fixed;">
+              <span></span>
             </a>
          </div>
       </header>
-      <div id="mySidenav" class="sidenav" style="position:fixed;">
-         <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
-         <a href="#step2" class="hvr-backward about">About</a>
-         <a href="#" class="hvr-backward">Clients</a>
-         <a href="Solutions.html" class="hvr-backward">Solutions</a>
-         <br>
-         <div class="social">
-            <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
-            <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
-            <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i><span></span></a>
-            <a href="https://www.snapchat.com/add/mrwcreations" class="icon-button google-plus"><i class="fa fa-snapchat-ghost"></i><span></span></a>
-         </div>
-         <div class="animated fadeinright" id="login" style="vertical-align: bottom; margin-top: 60px;">
-            <br>
-            <label><b>Client Entrance</b></label>
-            <div class="clientlogin">
-            <input type="text" placeholder="Client" name="uname" required>
-            <input  type="password" placeholder="Passcode" name="psw" required>
-            <button type="submit" class="hvr-forward" style="float:right; margin-right:55px; color:white;">Check In</button>
-            <br>
-            <a class="hvr-forward"><input style="float:right; padding-right: 32px;"  class="fb-connect" type="image" src="fb.png" >
-            </div>
-            <a/>
-         </div>
-      </div>
       <!-- Navigation
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div id="mySidenav" class="sidenav" style="position:fixed;">
+        <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
+        <div class="links">
+          <ul>
+            <li><img id="side-logo" src="/images/MRWnav.png" style="display: inline; opacity: 1; transition: 1.5s;"></li>
+            <li> <a href="#step2" class="hvr-grow">About </a></li>
+            <li> <a href="#" class="hvr-grow">Portfolio</a></li>
+            <li> <a href="Solutions.html" class="hvr-grow">Get Started</a></li>
+          </ul>
+        </div>
+        <div class="side-social">
+          <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i></a>
+          <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i></a>
+          <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i></a>
+          <a href="https://www.snapchat.com/add/mrwcreations" class="icon-button google-plus"><i class="fa fa-snapchat-ghost"></i></a>
+        </div>
+        <div id="side-login">
+          <br>
+          <label><b>Client Entrance</b></label>
+          <div class="clientlogin">
+            <input type="text" placeholder="Client" name="uname" required>
+            <input  type="password" placeholder="Passcode" name="psw" required>
+            <button type="submit" class="hvr-grow" style="float:right; margin-right:55px; color:white;">Check In</button>
+            </div>
+            <div>
+              <input style="float:right; padding-right: 39px;"  class="fb-connect" type="image" src="fb.png" >
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Primary Page Layout
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="twelve columns">
@@ -85,64 +90,62 @@
                data="/animations/city.html">
             </object>
           </div>  
-        <div class="homepage-content">
-          <h5 class="mainheader" >
-            Multi-Disiplinary <br class="Breaker">Creative Agency
-            <p class="basedinmnpls">Based in Minneapolis, MN.</p>
-          </h5>    
-            <div class="set-appointment">
-            <div class="hvr-bob">
-            <button >Make an Appointment</button>
+          <div class="homepage-content">
+            <h5 class="mainheader" >
+              Multi-Disiplinary <br class="Breaker">Creative Agency
+              <p class="basedinmnpls">Based in Minneapolis, MN.</p>
+            </h5>    
+              <div class="set-appointment">
+              <div class="hvr-bob">
+              <button >Make an Appointment</button>
+            </div>
+            </div>
+            <div class="animated infinite pulse next-button ">
+              <a id="show-next-page">
+                <i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i></a>
+            </div>
           </div>
-          </div>
-        <div class="animated infinite pulse next-button ">
-          <a id="show-next-page"><i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i></a>
         </div>
-        </div>
-        </div>
-      <div id="table-animation" style="display: none;"> 
-        <div class="heart animated"> 
-          <object id="EdgeID" 
-             type="text/html" 
-             width="100%" height="60%" 
-             data-dw-widget="Edge" 
-             data="/animations/table.html">
-          </object>
-        </div>  
-        <div class="row table-animation-content">
-          <div class="animated fadeinup">
-            <div style="text-align: center;">
-              <div  class="Undertable" >
-                <div style="margin:10px;">
-                  <h3>
-                    Developing Brands
-                  </h3>
-                  <h5> 
-                    Through a combination of digital marketing, original esthetics and identity development we make your company more recognizable, memorable and increase brand loyalty.
-                  </h5>
-                  <button class="secpagebutton">Button element</button>
-                  <div style="text-align: center;">
-                    <i class=" secnextpage fa fa-angle-double-down" id="show-step-3"></i>
+        <div id="table-animation"> 
+          <div class="heart animated"> 
+            <object id="EdgeID" 
+               type="text/html" 
+               width="100%" height="60%" 
+               data-dw-widget="Edge" 
+               data="/animations/table.html">
+            </object>
+            <object type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
+          </div>  
+          <div class="row table-animation-content">
+            <div class="animated fadeinup">
+              <div style="text-align: center;">
+                <div  class="Undertable" >
+                  <div style="margin:10px;">
+                    <!-- <object data="" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object> -->
+                    <div style="text-align: center;">
+                      <i class=" secnextpage fa fa-angle-double-down" id="show-step-3"></i>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>    
+        <div id="step3">
+           <!--  <object data="ad.html" type="" width="100%" height="70%"></object> -->
+            <!-- <h3>Our Clients</h3>
+            <object data="carousel.html" type="" width="100%"></object> -->
+            <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
         </div>
-      </div>    
-      <div id="step3">
-         <!--  <object data="ad.html" type="" width="100%" height="70%"></object> -->
-          <h3>Our Clients</h3>
-          <object data="carousel.html" type="" width="100%"></object>
-      </div>
-      <div id="step4">
-        <object data="ad.html" type="" width="100%" height="100%"></object>
+        <div id="step4">
+          
+        </div>
       </div>
       <nav Id="social">
       <ul>
-      <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
-      <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
-      <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
+        <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
+        <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
+        <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
       </ul>
    </body>
 </html>

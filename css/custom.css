@@ -282,15 +282,11 @@ canvas{overflow: hidden !important;}
     }
 }
 label {
-    color: white;
-    text-align: center;
+  
 }
 .fb-connect {
     height: 33px;
     margin-right: 16px;
-}
-object {
-    margin-top: 20px;
 }
 #login {
     border-top: .01px white solid;
@@ -630,17 +626,9 @@ button:hover {
     .Undetable h3 {
         font-size: 3.2rem;
     }
-    #step3 {
-        margin-top: 50px;
-    }
+  
 }
-#step3 {
-    display: none;
-    margin-top: 20px;
-}
-#step3 h3 {
-    text-align: center;
-}
+
 .Breaker {
     display: none;
 }
@@ -670,8 +658,53 @@ a {
 .contactspace {
     margin-left: 20px;
 }
-#table-animation{
+#table-animation, #step3, #step4{
     transition: 1s ease-in-out;
     display: none;
     opacity: 0;
 }
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #7027c3 !important;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #7027c3 !important;
+}
+.Tripodtitle{
+    font-size: 2.5rem !important;
+    font-family: 'anton';
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
+}
+.circle{
+    display: none;
+}
+.tabs .indicator {
+    background-color: #7027c3 !important;
+}
+.tabs .tab a{
+    color: #330033 !important;
+}
+.Tripodp{
+    font-family: 'cuprum';
+    line-height: 1.5 !important ;
+}
+.label.col-md-2.control-label{
+    float: left;
+}
+
+.carouselbottom{
+    bottom: 0;
+}
+.title{
+    font-weight: bolder;
+
+}
+.adpage{
+    margin: 5px;
+}
+#step3 {
+    display: none;
+     margin-top: 0px !important;
+    padding-top:10px !important; 
+}
+
