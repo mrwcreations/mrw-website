@@ -4,8 +4,8 @@
 
 **Contact Info:**
 
-Email: <info@mrwcreations.com><br/>
-Phone: +1-(612)-643-0981  
+Email: [info@mrwcreations.com](mailto:info@mrwcreations.com)  
+Phone: [+1-(612)-643-0981](tel:+16126430981)
 
 &copy; 2016-17 [MRW Creations](https://www.mrwcreations.org)
 
