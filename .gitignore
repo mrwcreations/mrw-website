@@ -9,3 +9,5 @@ gulpfile.js
 /js/min/
 /css/min/
 /dist/
+
+diff-index.txt
