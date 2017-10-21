@@ -26,7 +26,9 @@ function go_down(){
       $("#city-animation").hide();
       $("#step3").hide();
       $("#step4").hide();
-      $("#table-animation").fadeIn(1000);
+      // $("#table-animation").fadeIn(1000);
+      $("#table-animation").css('display', 'block');
+      $("#table-animation").css('opacity', '1');
       document.location.hash = "step2";
     }, timout_interval*2);
     setTimeout(function(){}, timout_interval*2);
@@ -104,10 +106,10 @@ function touchStart(e){
 function touchEnd(e){
   var te = e.originalEvent.changedTouches[0].clientY;
  if(ts > te+10){
-    hide_city();
+    go_down();
     console.log("down");
  }else if(ts < te-10){
-    hide_table();
+    go_up();
     console.log("up");
  }
 }
