@@ -140,13 +140,6 @@ $(document).ready(function(){
       $("#step3").fadeIn(1000);
     }
   }
-  $(".about").on('click', function(){
-    $("#city-animation").hide();
-    $("#step3").hide();
-    $("#step4").hide();
-    $("#table-animation").fadeIn(1000);
-    document.location.hash = "step2";
-  })
   if(link === baseUrl){
     $("#table-animation").hide();
     $("#step3").hide();
