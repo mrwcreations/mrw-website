@@ -1,143 +1,131 @@
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Schedule a meeting</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="/css/custom.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/bootstrap-datetime-picker.min.js"></script>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<script src="/js/scroll-events.js"></script>
-	<style>
-		body{
-			font-family: 'Cuprum', sans-serif;
-			background: none;
-		}
-		.phone, .address, .email{
-			display: none;
-		}
-		@media(max-width: 990px){
-			.input-group, .control-label{
-				text-align: left !important;
-				width: 90% !important;
-				padding-left: 20px !important;
-			}
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<div class="step2">
-			<form class="form-horizontal" role="form">
-				<legend>
-					<h1 class="title">Schedule a Meeting</h1>
-				<div class="title-help"><small class="text-muted">Go ahead, pick a time that works and we will take care of the rest.</small></div>
-				</legend>
-			
+	<head>
+		<meta charset="UTF-8">
+		<title>Schedule a meeting</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/schedule-meeting.css">
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCp96dftuw41PZ3L4AR_iBPAATdo6Zb3H4&sensor=false&libraries=places&language=en-US"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap-datetime-picker.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js' aysnc defer></script>
+		<script src="/js/scroll-events.js"></script>
+		<script src="/js/bootstrap-formhelpers.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="step2">
+				<form class="form-horizontal contact-form" role="form">
+					<legend>
+						<h3 class="title">Schedule a Meeting</h3>
+					<div class="title-help"><small class="text-muted">Placeholder</small></div>
+					</legend>
+					<div class="form-group name">
+						<label for="" class="col-md-2 control-label">Name/Organization *</label>
+						<div class="input-group col-md-5">
+							<input name="meeting_name" type="text" class="form-control" size="16" id="meeting-name" placeholder="Bruce Wayne/Wayne Enterprises" />
+							<small id="error" class="text-danger">Please enter a valid name</small>
+						</div>
+					</div>
+					<div class="form-group project-description">
+						<label for="description" class="col-md-2 control-label">Tell us a little about your project</label>
+						<div class="input-group col-md-5">
+							<textarea name="meeting_description" id="meeting-description" name="description" class="form-control" cols="10" rows="2" placeholder="Secretly protect Gotham city..."></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dtp_input1" class="col-md-2 control-label">Select a Date &amp; time *</label>
+		                <div class="input-group date form_datetime col-md-5" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+		                    <input class="form-control" size="16" type="text" value="" readonly placeholder="Select a Date and Time from popup">
+		                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+		                </div>
+		                <label class="col-md-2"></label>
+		                <div class="input-group datetime"><small id="error" class="text-danger">Please select a valid date</small></div>
+						<input name="meeting_date" type="hidden" id="dtp_input1" value="" />
+					</div>
 
-				<div class="form-group">
-					<label for="" class="col-md-2 control-label">Name/Organization</label>
-					<div class="input-group col-md-5">
-						<input type="text" class="form-control" size="16"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="" class="col-md-2 control-label">Tell us a little about your project</label>
-					<div class="input-group col-md-5">
-						<textarea name="description" class="form-control" cols="10" rows="5"></textarea>
-					</div>
-				</div>
-				<div class="form-group" style="margin-top: 20px;">
-					<label for="dtp_input1" class="col-md-2 control-label">Select a Date &amp; time</label>
-	                <div class="input-group date form_datetime col-md-5" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-	                    <input class="form-control" size="16" type="text" value="" readonly>
-	                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-						<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-	                </div>
-					<input type="hidden" id="dtp_input1" value="" />
-				</div>
+					 <div class="form-group meeting-type">
+					 	<label for="meetingType" class="col-md-2 control-label">Meeting Type *</label>
+					 	<div class="input-group col-md-5">
+							<label class="radio-inline"><input type="radio" name="meeting-option" class="meeting-phone" value="meeting-phone" checked="checked">Phone</label>
+							<label class="radio-inline"><input type="radio" name="meeting-option" class="meeting-email" value="meeting-email">Email</label>
+							<label class="radio-inline"><input type="radio" name="meeting-option" class="meeting-person" value="meeting-person">In-Person</label>
+						</div>
+					 </div>
+					<div class="form-group email">
+					    <label for="input-email"  class="col-md-2 control-label">Email address *</label>
+					    <div class="input-group col-md-5">
+					    	<input name="input_email" type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone.</small><br/>
+					    	<small id="error" class="text-danger">Please enter a valid email address</small>
+					    </div>
+					 </div>
+					 <div class="form-group phone">
+					    <label for="input-phone"  class="col-md-2 control-label">Phone *</label>
+					    <div class="input-group col-md-5">
+					    	<input name="input_phone" type="tel" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" id="input-phone">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone.</small><br/>
+					    	<small id="error" class="text-danger">Please enter a phone nubmer</small>
+					    </div>
+					 </div>
+					 <div class="form-group address">
+					    <label for="input-address"  class="col-md-2 control-label">Address *</label>
+					    <div class="input-group col-md-5">
+					    	<input name="input_address" type="email" class="form-control" id="input-address" aria-describedby="emailHelp" placeholder="Enter address">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone.</small><br/>
+					    	<small id="error" class="text-danger">Please enter a valid address</small>
+					    </div>
+					 </div>
+					 <div class="form-group">
+					 	<label for="" class="col-md-2 control-label"></label>
+					 	<div class="g-recaptcha col-md-5" data-sitekey="6LeimzMUAAAAAEaRQou6AWXNaOYez4I2zlJcPVJ_">
+					 	</div>
+					 </div>
+					 <div class="form-group">
+					 	<label class="col-md-2 control-label"></label>
+					 	<div class="col-md-5 captcha"><small id="error" class="text-danger">Please verify captcha</small></div>
+					 </div>
+					 <div class="next">
+					 	<button  type="submit" class="submit btn btn-primary">Submit</button><br/>
+					 </div>
+					 <div><span class="form-text text-muted">* - Required Fields</span></div>
+				</form>
+				<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				  Launch demo modal
+				</button> -->
 
-				 <div class="form-group meeting-type">
-				 	<label for="meetingType" class="col-md-2 control-label">Meeting Type</label>
-				 	<div class="input-group col-md-5">
-						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-phone">Phone</label>
-						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-email">Email</label>
-						<label class="radio-inline"><input type="radio" name="meeting-option" value="meeting-person">In-Person</label>
-					</div>
-				 </div>
-				<div class="form-group email">
-				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Email address</label>
-				    <div class="input-group col-md-5">
-				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Thank you, <span class="client_name"></span>!</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="alert alert-success form-submit-successful">
+				  			<strong><span class="client_name"></span></strong>, we will get in touch with you within 24 hours.
+						</div>
+						<div class="alert alert-danger form-submit-failure">
+							<strong>Oops!</strong> Seems like some of our services are down. We are very sorry. We will add another hour of free consultation if you call this number: <a href="tel:+1-(612)643-0981">+1-(612)-643-0981</a> or email us at <a href="mailto:info@mrwcreations.com">info@mrwcreations.com</a>
+						</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				      </div>
 				    </div>
-				 </div>
-				 <div class="form-group phone">
-				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Phone</label>
-				    <div class="input-group col-md-5">
-				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone">
-				    	<small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-				    </div>
-				 </div>
-				 <div class="form-group address">
-				    <label for="exampleInputEmail1"  class="col-md-2 control-label">Address</label>
-				    <div class="input-group col-md-5">
-				    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter address">
-				    	<small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone else.</small>
-				    </div>
-				 </div>
-				 <div class="form-group">
-				 	<label for="" class="col-md-2 control-label"></label>
-				 	<div class="g-recaptcha col-md-5" data-sitekey="6LeimzMUAAAAAEaRQou6AWXNaOYez4I2zlJcPVJ_"></div>
-				 </div>
-				 <div class="next">
-				 	<button class="btn">Clear</button>
-				 	<button  type="submit" class="submit btn btn-primary">Submit</button>
-				 </div>
-			</form>
+				  </div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<script type="text/javascript">	
-		$(".contact-form").on('change', function(){
-			if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-phone"){
-				$('.phone').show();
-				$('.email').hide();
-				$('.address').hide();
-			} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-email"){
-				$('.email').show();
-				$('.phone').hide();
-				$('.address').hide();
-			} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-person"){
-				$('.address').show();
-				$('.phone').hide();
-				$('.email').hide();
-			}
-		});
-		$('.form_datetime').datetimepicker({
-	        //language:  'fr',
-	        weekStart: 1,
-	        todayBtn:  1,
-			autoclose: 1,
-			todayHighlight: 1,
-			startView: 2,
-			forceParse: 0,
-	        showMeridian: 0
-	    });
-	    $(".submit").on('click', function(e){
-	    	e.preventDefault();
-	    	if(grecaptcha.getResponse()){
-	    		console.log("Successful");
-	    	}
-	    	else{
-	    		console.log("verify catcha");
-	    	}
-	    })
-	</script>
-</body>
+		<script src="/js/schedule-meeting.js"></script>
+	</body>
 </html>
