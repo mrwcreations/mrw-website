@@ -288,6 +288,7 @@ label {
     height: 33px;
     margin-right: 16px;
 }
+
 #login {
     border-top: .01px white solid;
 }
@@ -304,7 +305,7 @@ label {
     text-align: center;
     margin-top: -190px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 720px) {
     #mobile-text {
         display: inline;
         text-align: center;
@@ -320,22 +321,18 @@ label {
     #mysidenav {
         font-family: Martel;
     }
-    @media only screen and (min-width: 490px) {
+    @media only screen and (min-width: 720px) {
         #social {
-            opacity: 1;
+            display: none;
             transition: .5s;
             display: none;
-            
-
         }
     }
     #social {
         position: fixed;
         top: 400px;
-        opacity: 0;
+        display: none;
         transition: .5s;
-        
-       
     }
 }
 #social {
@@ -523,7 +520,8 @@ label {
     }
 }
 .container {
-    padding: 0px;
+    padding: 5px;
+    max-width: 920px;
 }
 .Weoperate {
     text-align: center;
@@ -556,7 +554,7 @@ label {
 .set-appointment button {
     background-color: #e0dbd1;
 }
-button:hover {
+.set-appointment button:hover {
     display: inline-block;
     height: 38px;
     color: #555;
@@ -658,7 +656,7 @@ a {
 .contactspace {
     margin-left: 20px;
 }
-#table-animation, #step3, #step4{
+#table-animation{
     transition: 1s ease-in-out;
     display: none;
     opacity: 0;
@@ -670,7 +668,7 @@ a {
     color: #7027c3 !important;
 }
 .Tripodtitle{
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     font-family: 'anton';
     margin-top: 15px !important;
     margin-bottom: 0px !important;
@@ -696,7 +694,10 @@ a {
     bottom: 0;
 }
 .title{
-    font-weight: bolder;
+    
+    margin-top: 45px;
+    font-family: 'anton';
+    color: #330033;
 
 }
 .adpage{
@@ -707,4 +708,70 @@ a {
      margin-top: 0px !important;
     padding-top:10px !important; 
 }
+.Abouttripod{
+    margin-top: -95px;
+    overflow: hidden;
+
+}
+#animation_container{
+    margin-top: 50px;
+}
+.next{
+   margin-left: 20%;
+
+}
+div.next button.submit.btn.btn-primary
+{
+    width: 200px;
+    background-color: #bce5a6 ;
+    border:none;
+    color: black;
+
+}
+.next .btn-primary:hover{
+  
+    background-color: #ade092 !important;
+    display: inherit;
+height: 35px;
+color: white;
+text-align: center;
+font-size: 16px;
+font-weight: 600;
+line-height: 0px;
+letter-spacing: inherit;
+text-transform: none;
+text-decoration: none;
+white-space: nowrap;
+background-color: #bec0d0;
+
+border: 1px solid red;
+cursor: pointer;
+box-sizing: border-box;
+
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.set-appointment button{
+    font-family: 'cuprum';
+}
+
+div.step2 form.form-horizontal div.form-group div.input-group.date.form_datetime.col-md-5 input.form-control,html body div.container div.step2 form.form-horizontal div.form-group div.input-group.col-md-5 textarea.form-control,html body div.container div.step2 form.form-horizontal div.form-group div.input-group.col-md-5 input.form-control,
+html body div.container div.step2 form.form-horizontal div.form-group div.input-group.date.form_datetime.col-md-5 span.input-group-addon
+{
+    background-color: #fbf7fb ;
+}
+
+html body div.container div.step2 form.form-horizontal div.form-group div.input-group.date.form_datetime.col-md-5 span.input-group-addon span.glyphicon.glyphicon-remove,
+html body div.container div.step2 form.form-horizontal div.form-group div.input-group.date.form_datetime.col-md-5 span.input-group-addon span.glyphicon.glyphicon-th{
+    color: #330033;
+}
+
+html body div.container div.step2 form.form-horizontal div.form-group label.col-md-2.control-label,
+html body div.container div.step2 form.form-horizontal div.form-group label.col-md-2.control-label,
+html body div.container div.step2 form.form-horizontal div.form-group label.col-md-2.control-label,
+html body div.container div.step2 form.form-horizontal div.form-group.meeting-type label.col-md-2.control-label{
+    color: 330033;
+}
+
+
 

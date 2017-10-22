@@ -26,14 +26,15 @@ function openNav() {
   document.getElementById("logo").style.opacity = "0";
   
   // $(".twelve").css('opacity', '0.5');    
-  if($(window).width() <= 490){
+  if($(window).width() <= 720){
     $(".twelve").css('opacity', '0.5');
   }
   else{
-    $(".twelve").animate({width: '90%'}, 50);
-    $(".homepage-content").css('width', '90%');
+
+    $(".twelve").animate({width: '80%'}, 50);
+    $(".homepage-content").css('width', '100%');
   }
-  $("#social").css('opacity', '1');
+  $("#social").show();
 }
 
 // Close navbar
@@ -45,8 +46,8 @@ function closeNav() {
   $(".twelve").css('opacity', '1');
   $(".twelve").css('width', '100%');
   $(".homepage-content").css('width', '80%');
-  if($(window).width() <= 490){
-     $("#social").css('opacity', '0');
+  if($(window).width() <= 720){
+     $("#social").hide();
   }
 }
 
