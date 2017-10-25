@@ -8,4 +8,4 @@ console.log(document.location);
 // $(window).on("on"+mousewheelevt, parent.scrollEvent);
 $(window).on('touchstart', parent.touchStart);
 $(window).on('touchend', parent.touchEnd);
-$(document).on('click', parent.closeNavOnClickDocument(event));
+$(document).on('click', parent.closeNavOnClickDocument);
