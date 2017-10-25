@@ -36,3 +36,6 @@ body{
 button .close{
 	float: right;
 }
+.input-group[class*=col-]{
+	width: 80% !important;
+}

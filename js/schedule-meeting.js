@@ -77,7 +77,8 @@ $(".submit").on('click', function(e){
 				address: address
 			},
 			function(data){
-				if(data === "Successful"){
+				data = JSON.parse(data);
+				if(data.message === "Successful"){
 					$(".client_name").html(name);
 					$(".form-submit-successful").show();
 					$("#myModal").modal('show');
