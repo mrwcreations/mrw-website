@@ -6,6 +6,7 @@ else if (window.addEventListener) //WC3 browsers
     window.addEventListener(mousewheelevt, function(e){scrollEvent(e)}, false)
 $(window).on('touchstart', touchStart);
 $(window).on('touchend', touchEnd);
+$(document).on('click', closeNavOnClickDocument);
 function scrollEvent(e){
   var evt = window.event || e;
   var delta = evt.detail? evt.detail*(-4) : evt.wheelDelta;
