@@ -12,4 +12,4 @@ gulpfile.js
 # Ignore files that are not required
 diff-index.txt
 /temp/
-/scripts/keys.ini
+/scripts/**/*.ini
