@@ -11,8 +11,9 @@ for (var i = toggles.length - 1; i >= 0; i--) {
 function toggleHandler(toggle) {
  toggle.addEventListener( "click", function(e) {
    e.preventDefault();
-   (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("");
-   $(".social").hide();                                                                                                            
+   if(this.classList.contains("is-active") === true) {
+    this.classList.remove("is-active")
+  }
  });
 }
 $(".c-hamburger--htra open").on('click', openNav);
@@ -27,12 +28,12 @@ function openNav() {
   
   // $(".twelve").css('opacity', '0.5');    
   if($(window).width() <= 720){
-    $(".twelve").css('opacity', '0.5');
+    $(".bg-info").css('opacity', '0.5');
   }
   else{
 
-    $(".twelve").animate({width: '80%'}, 50);
-    $(".homepage-content").css('width', '100%');
+    $(".bg-info").animate({width: '80%'}, 50);
+    $(".item").css('width', '100%');
   }
   $("#social").show();
 }
@@ -43,9 +44,9 @@ function closeNav() {
   document.getElementById("curve").style.marginRight= "0";
   document.getElementById("logo").style.opacity = "1";
   document.getElementById("right-curve").style.marginRight = "0";        
-  $(".twelve").css('opacity', '1');
-  $(".twelve").css('width', '100%');
-  $(".homepage-content").css('width', '80%');
+  $(".bg-info").css('opacity', '1');
+  $(".bg-info").css('width', '100%');
+  $(".item").css('width', '100%');
   if($(window).width() <= 720){
      $("#social").hide();
   }
@@ -54,12 +55,10 @@ function closeNav() {
 $(document).ready(function(){
   // Code to hide all other divs until animation loads
   if(document.location.hash === ""){
-    $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, #social, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
+    $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
     setTimeout(function(){}, 4000); 
   }
-  $(".twelve").on('click', function(){
-    if($(".mySidenav").is(":visible")){
-      closeNav();
-    }
-  });
+  if($(window).width() <= 720){
+    $("#social").hide();
+  }
 });

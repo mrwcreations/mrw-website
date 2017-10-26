@@ -1,151 +1,326 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/js/transformation.js" type="text/javascript"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
 <script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="/js/custom.js"></script>
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- Basic Page Needs
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <meta charset="utf-8">
-      <title>MRW Creations</title>
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- Mobile Specific Metas
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- FONT
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <!-- CSS
-         ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-      <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/skeleton.css">
-      <link rel="stylesheet" href="css/style.min.css">
-      <link rel="stylesheet" href="css/custom.css">
-      <link rel="stylesheet" href="css/animate.css">
-      <link rel="stylesheet" href="css/hover.css">
-      <link rel="stylesheet" type="text/css" href="css/carousel.css" rel="stylesheet" type="text/css" >
-      <!-- Favicon
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <link rel="icon" type="image/png" href="images/favicon.png">
-   </head>
-   <body>
-      <!-- Header
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <header id="curve">
-         <div id="logodiv" class="animated fadeinleft">
-            <img src="/images/header.gif" id="logo" Class="hvr-forward">
-         </div>
-         <div id="hamburger">
-            <img class="animated fadeinright" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0; pointer-events: none;"
-               id="right-curve">
-            <a class="c-hamburger c-hamburger--htra open hvr-grow" onclick="openNav()" style="position:fixed;">
-              <span></span>
-            </a>
-         </div>
-      </header>
-      <!-- Navigation
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div id="mySidenav" class="sidenav" style="position:fixed;">
-        <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
-        <div class="links">
-          <ul>
-            <li><img id="side-logo" src="/images/MRWnav.png" style="display: inline; opacity: 1; transition: 1.5s;"></li>
-            <li> <a href="#step2" class="hvr-grow">About </a></li>
-            <li> <a href="#" class="hvr-grow">Portfolio</a></li>
-            <li> <a href="Solutions.html" class="hvr-grow">Get Started</a></li>
-          </ul>
+<script src="/js/transformation.js" type="text/javascript"></script>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>MRW Creations</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" type="text/css" href="css/carousel.css" rel="stylesheet" type="text/css" >
+     <style>
+      #table-animation{
+        display: block !important;
+      }
+      .container{
+        max-width: 1020px !important;
+      }
+    .bg-info .item{
+      height: 100% !important;
+    }
+    .bg-info{
+      background: none !important;
+    }
+    body {
+      margin: 0;
+    }
+
+    .ticker-headline {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 15px 0;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .carousel.vertical .carousel-inner {
+      height: 100%;
+      width: 100%;
+    }
+    
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      .carousel.vertical .carousel-inner > .item {
+        -webkit-transition: 0.6s ease-out;
+        transition: 0.6s ease-out;
+      }
+      .carousel.vertical .carousel-inner > .item.next, .carousel.vertical .carousel-inner > .item.active.right {
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+        top: 0;
+      }
+      .carousel.vertical .carousel-inner > .item.prev, .carousel.vertical .carousel-inner > .item.active.left {
+        -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+        top: 0;
+      }
+  
+    .carousel.vertical .carousel-inner > .active,
+    .carousel.vertical .carousel-inner > .next,
+    .carousel.vertical .carousel-inner > .prev {
+      display: block;
+    }
+    .carousel.vertical .carousel-inner > .active {
+      top: 0;
+    }
+    .carousel.vertical .carousel-inner > .next,
+    .carousel.vertical .carousel-inner > .prev {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .carousel.vertical .carousel-inner > .next {
+      top: 100%;
+    }
+    .carousel.vertical .carousel-inner > .prev {
+      top: -100%;
+    }
+    .carousel.vertical .carousel-inner > .next.left,
+    .carousel.vertical .carousel-inner > .prev.right {
+      top: 0;
+    }
+    .carousel.vertical .carousel-inner > .active.left {
+      top: -100%;
+    }
+    .carousel.vertical .carousel-inner > .active.right {
+      top: 100%;
+    }
+
+    .carousel.vertical .carousel-control {
+      left: auto;
+      width: 50px;
+    }
+    .carousel.vertical .carousel-control.up {
+      top: 0;
+      right: 0;
+      bottom: 50%;
+    }
+    .carousel.vertical .carousel-control.down {
+      top: 50%;
+      right: 0;
+      bottom: 0;
+    }
+    .carousel.vertical .carousel-control .icon-prev,
+    .carousel.vertical .carousel-control .icon-next,
+    .carousel.vertical .carousel-control .glyphicon-chevron-up,
+    .carousel.vertical .carousel-control .glyphicon-chevron-down {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      display: inline-block;
+    }
+    .carousel.vertical .carousel-control .icon-prev,
+    .carousel.vertical .carousel-control .glyphicon-chevron-up {
+      left: 50%;
+      margin-left: -10px;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .carousel.vertical .carousel-control .icon-next,
+    .carousel.vertical .carousel-control .glyphicon-chevron-down {
+      left: 50%;
+      margin-left: -10px;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .carousel.vertical .carousel-control .icon-up,
+    .carousel.vertical .carousel-control .icon-down {
+      width: 20px;
+      height: 20px;
+      line-height: 1;
+      font-family: serif;
+    }
+    .carousel.vertical .carousel-control .icon-prev:before {
+      content: '\2039';
+    }
+    .carousel.vertical .carousel-control .icon-next:before {
+      content: '\203a';
+    }
+    </style>
+</head>
+<body translate="no" >
+  <header id="curve">
+     <div id="logodiv" class="animated fadeinleft">
+       <a href="#step1"><img src="/images/header.gif" id="logo" Class="hvr-forward"></a>
+     </div>
+     <div id="hamburger">
+        <img class="animated fadeinright" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0; pointer-events: none;"
+           id="right-curve">
+        <a class="c-hamburger c-hamburger--htra open hvr-grow" onclick="openNav()" style="position:fixed; right: 10;">
+          <span></span>
+        </a>
+     </div>
+  </header>
+  <div id="mySidenav" class="sidenav" style="position:fixed;">
+    <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
+    <div class="links">
+      <ul>
+        <li><img id="side-logo" src="/images/MRWnav.png" style="display: inline; opacity: 1; transition: 1.5s;"></li>
+        <li> <a href="#step2" class="hvr-grow">About </a></li>
+        <li> <a href="#" class="hvr-grow">Portfolio</a></li>
+        <li> <a href="Solutions.html" class="hvr-grow">Get Started</a></li>
+      </ul>
+    </div>
+    <div class="side-social">
+      <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i></a>
+      <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i></a>
+      <a href="https://www.snapchat.com/add/mrwcreations" class="icon-button google-plus"><i class="fa fa-snapchat-ghost"></i></a>
+    </div>
+    <div id="side-login">
+      <br>
+      <label><b>Client Entrance</b></label>
+      <div class="clientlogin">
+        <input type="text" placeholder="Client" name="uname" required>
+        <input  type="password" placeholder="Passcode" name="psw" required>
+        <button type="submit" class="hvr-grow" style="float:right; margin-right:50px; color:white;">Check In</button>
         </div>
-        <div class="side-social">
-          <a href="https://www.instagram.com/mrwcreations/" class="icon-button instagram"><i class="fa fa-instagram"></i></a>
-          <a href="https://twitter.com/mrwcreations" class="icon-button twitter"><i class="fa fa-twitter"></i></a>
-          <a href="https://facebook.com/mrwcreations" class="icon-button facebook"><i class="fa fa-facebook "></i></a>
-          <a href="https://www.snapchat.com/add/mrwcreations" class="icon-button google-plus"><i class="fa fa-snapchat-ghost"></i></a>
-        </div>
-        <div id="side-login">
-          <br>
-          <label><b>Client Entrance</b></label>
-          <div class="clientlogin">
-            <input type="text" placeholder="Client" name="uname" required>
-            <input  type="password" placeholder="Passcode" name="psw" required>
-            <button type="submit" class="hvr-grow" style="float:right; margin-right:55px; color:white;">Check In</button>
-            </div>
-            <div>
-              <input style="float:right; padding-right: 39px;"  class="fb-connect" type="image" src="fb.png" >
-            </div>
-          </div>
+        <div>
+          <input style="float:right; padding-right: 39px;"  class="fb-connect" type="image" src="fb.png" >
         </div>
       </div>
-      <!-- Primary Page Layout
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div class="twelve columns">
-        <div id="city-animation">
-          <div class="heart animated infinite pulse"> 
-            <object id="EdgeID" 
-               type="text/html" 
-               width="100%" height="75%" 
-               data-dw-widget="Edge" 
-               data="/animations/city.html">
-            </object>
-          </div>  
-          <div class="homepage-content">
-            <h5 class="mainheader" >
-              Multi-Disiplinary <br class="Breaker">Creative Agency
-              <p class="basedinmnpls">Based in Minneapolis, MN.</p>
-            </h5>    
-              <div class="set-appointment">
-              <div class="hvr-bob">
+    </div>
+  </div>
+<div class="bg-info">
+  <div class="container">
+    <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" id="city-animation step_1">
+      <div class="heart animated infinite pulse"> 
+        <object id="EdgeID" 
+           type="text/html" 
+           width="100%" height="75%" 
+           data-dw-widget="Edge" 
+           data="/animations/city.html">
+        </object>
+      </div>  
+      <div class="homepage-content">
+        <h5 class="mainheader" >
+          Multi-Disiplinary <div class="CreativeAgency">Creative Agency</div>
+          <p class="basedinmnpls">Based in Minneapolis, MN.</p>
+        </h5>    
+        <div class="set-appointment">
+          <div class="hvr-bob">
               <a href="#step3"><button>Make an Appointment</button></a>
-            </div>
-            </div>
-            <div class="animated infinite pulse next-button ">
-              <a id="show-next-page">
-                <i class="animated infinite pulse fa fa-angle-double-down" id="show-next-page"></i></a>
-            </div>
           </div>
         </div>
-        <div id="table-animation"> 
-          <div class="heart animated"> 
-            <object id="EdgeID" 
-               type="text/html" 
-               width="100%" height="60%" 
-               data-dw-widget="Edge" 
-               data="/animations/table.html">
-            </object>
-            <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
-          </div>  
-          <div class="row table-animation-content">
-            <div class="animated fadeinup">
-              <div style="text-align: center;">
-                <div  class="Undertable" >
-                  <div style="margin:10px;">
-                    <!-- <object data="" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object> -->
-                    <div style="text-align: center;">
-                      <i class=" secnextpage fa fa-angle-double-down" id="show-step-3"></i>
-                    </div>
-                  </div>
-                </div>
+        
+          <a id="show-next-page">
+          <div class="animated infinite pulse next-button ">
+            <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i></a>
+        </div>
+      </div>
+        </div>
+        <div class="item" id="step_2">
+          <div> 
+            <div class="heart animated"> 
+              <object id="EdgeID" 
+                 type="text/html" 
+                 width="100%" height="60%" 
+                 data-dw-widget="Edge" 
+                 data="/animations/table.html">
+              </object>
+              <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
+            </div> 
+            <div class="secondnextbutton">
+              <div class="animated infinite pulse next-button ">
+                <a href="#step3" id="show-next-page2">
+                  <i class="animated infinite flash fa fa-angle-double-down" id=""></i></a></div>
               </div>
             </div>
-          </div>
-        </div>    
-        <div id="step3">
-           <!--  <object data="ad.html" type="" width="100%" height="70%"></object> -->
-            <!-- <h3>Our Clients</h3>
-            <object data="carousel.html" type="" width="100%"></object> -->
-            <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
         </div>
-        <div id="step4">
-          
+        <div class="item" id="step_3">
+          <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
         </div>
-      </div>
-      <nav Id="social">
-      <ul>
-        <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
-        <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
-        <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
-      </ul>
-   </body>
+
+      <!-- Controls -->
+      <!-- a class="up carousel-control" href="#carousel-example-vertical" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="down carousel-control" href="#carousel-example-vertical" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+  </div>
+</div>
+</div>
+  <nav id="social">
+  <ul>
+  <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
+  <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
+  <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
+  </ul>
+  </nav>
+
+<script src="/js/custom.js"></script>
+<script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(".carousel").carousel({
+  interval: false
+});
+$("#show-next-page").on('click', function(){
+  $(".carousel").carousel('next');
+})
+$(document).ready(function(){
+  var hash = document.location.hash;
+  var $carousel = $(".carousel");
+  var $step_1_button = $("#show-next-page");
+  $carousel.carousel({
+    interval: false,
+    wrap: false
+  });
+  $step_1_button.on('click', function(){
+    $carousel.carousel('next');
+  })
+  hashChange(document.location.hash);
+  window.onhashchange = function(){
+    hashChange(document.location.hash);
+  }
+  $carousel.bind('slide.bs.carousel', function(e){
+    var childsList = Array.prototype.slice.call( $('.carousel').children );
+    console.log(e);
+    if(e.relatedTarget.outerHTML.indexOf("step_1") > 0){
+      window.location.hash = "#step1";
+    } else if(e.relatedTarget.outerHTML.indexOf("step_2") > 0){
+      window.location.hash = "#step2";
+    } else if(e.relatedTarget.outerHTML.indexOf("step_3")){
+      window.location.hash = "#step3";
+    }
+  });
+  function hashChange(input_hash){
+    switch(input_hash){
+      case "#step1": 
+        $carousel.carousel(0);
+        break;
+      case "#step2":
+        $carousel.carousel(1);
+        break;
+      case "#step3":
+        $carousel.carousel(2);
+        break;
+      default:
+        $carousel.carousel(0);
+    }
+  }
+});
+</script>
+
+</body>
 </html>
+ 
