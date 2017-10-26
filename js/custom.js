@@ -51,7 +51,12 @@ function closeNav() {
      $("#social").hide();
   }
 }
-
+$(".carousel").carousel({
+  interval: false
+});
+$("#show-next-page").on('click', function(){
+  $(".carousel").carousel('next');
+});
 $(document).ready(function(){
   // Code to hide all other divs until animation loads
   if(document.location.hash === ""){
@@ -60,5 +65,46 @@ $(document).ready(function(){
   }
   if($(window).width() <= 720){
     $("#social").hide();
+  }
+
+  var hash = document.location.hash;
+  var $carousel = $(".carousel");
+  var $step_1_button = $("#show-next-page");
+  $carousel.carousel({
+    interval: false,
+    wrap: false
+  });
+  $step_1_button.on('click', function(){
+    $carousel.carousel('next');
+  })
+  hashChange(document.location.hash);
+  window.onhashchange = function(){
+    hashChange(document.location.hash);
+  }
+  $carousel.bind('slide.bs.carousel', function(e){
+    var childsList = Array.prototype.slice.call( $('.carousel').children );
+    console.log(e);
+    if(e.relatedTarget.outerHTML.indexOf("step_1") > 0){
+      window.location.hash = "#step1";
+    } else if(e.relatedTarget.outerHTML.indexOf("step_2") > 0){
+      window.location.hash = "#step2";
+    } else if(e.relatedTarget.outerHTML.indexOf("step_3")){
+      window.location.hash = "#step3";
+    }
+  });
+  function hashChange(input_hash){
+    switch(input_hash){
+      case "#step1": 
+        $carousel.carousel(0);
+        break;
+      case "#step2":
+        $carousel.carousel(1);
+        break;
+      case "#step3":
+        $carousel.carousel(2);
+        break;
+      default:
+        $carousel.carousel(0);
+    }
   }
 });
