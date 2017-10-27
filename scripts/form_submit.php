@@ -36,6 +36,7 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
+error_log($response);
 curl_close($curl);
 
 $meeting_time = $meeting_datetime->format('h:ma');

@@ -2,8 +2,11 @@ body{
 	font-family: 'Cuprum', sans-serif;
 	background: none;
 }
-.address, .email{
+.address{
 	display: none;
+}
+.datetimepicker{
+		left: 150pt !important;
 }
 @media(max-width: 990px){
 	.input-group, .control-label{
@@ -12,7 +15,7 @@ body{
 		padding-left: 20px !important;
 	}
 	.datetimepicker{
-		left: 40px !important;
+		left: 100pt !important;
 	}
 	legend{
 		margin-bottom: 8px !important;

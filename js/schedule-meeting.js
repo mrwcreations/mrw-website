@@ -1,11 +1,7 @@
 $(".contact-form").on('change', function(){
 	if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-phone"){
 		$('.phone').show();
-		$('.email').hide();
-		$('.address').hide();
-	} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-email"){
 		$('.email').show();
-		$('.phone').hide();
 		$('.address').hide();
 	} else if($('input[name=meeting-option]:checked', '.contact-form').val() === "meeting-person"){
 		$('.address').show();
@@ -23,7 +19,7 @@ $('.form_datetime').datetimepicker({
 	startView: 2,
 	forceParse: 0,
     showMeridian: 0,
-    startDate: '+1d',
+    startDate: '+0d',
     daysOfWeekDisabled: [0]
 });
 var autocomplete = new google.maps.places.Autocomplete($("#input-address")[0], {}	);
@@ -37,15 +33,7 @@ $(".submit").on('click', function(e){
 	var phone = "+1 (123) 456-7890", email="noemail@provided.com", address="No address provided";
 	var meeting_time, meeting_description;
 	if($(".meeting-phone").is(":checked")){
-		phone = $("#input-phone").val();
-		if(phone.length === 0){
-			$(".phone #error").show();
-			return false;
-		}else{
-			$(".phone #error").hide();
-		}
-	}
-	else if($(".meeting-email").is(":checked")){
+		phone = $("#input-phone").val() ? $("#input-phone").val() : phone;
 		email = $("#input-email").val();
 		if(email.length === 0){
 			$(".email #error").show();
