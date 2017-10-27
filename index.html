@@ -29,9 +29,9 @@
       .container{
         max-width: 1020px !important;
       }
-    /*.bg-info .item{
-      height: 100vh !important;
-    }*/
+    .bg-info .item{
+      height: 100% !important;
+    }
     .bg-info{
       background: none !important;
     }
@@ -130,26 +130,6 @@
       top: 50%;
       margin-top: -10px;
     }
-    .carousel.vertical .carousel-control .icon-next,
-    .carousel.vertical .carousel-control .glyphicon-chevron-down {
-      left: 50%;
-      margin-left: -10px;
-      top: 50%;
-      margin-top: -10px;
-    }
-    .carousel.vertical .carousel-control .icon-up,
-    .carousel.vertical .carousel-control .icon-down {
-      width: 20px;
-      height: 20px;
-      line-height: 1;
-      font-family: serif;
-    }
-    .carousel.vertical .carousel-control .icon-prev:before {
-      content: '\2039';
-    }
-    .carousel.vertical .carousel-control .icon-next:before {
-      content: '\203a';
-    }
     </style>
 </head>
 <body translate="no" >
@@ -195,80 +175,69 @@
       </div>
     </div>
   </div>
-<div class="bg-info">
-  <div class="container">
-    <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
-      <div class="carousel-inner" role="listbox">
-        <div class="item active" id="city-animation step_1">
-      <div class="heart animated infinite pulse"> 
-        <object id="EdgeID" 
-           type="text/html" 
-           width="100%" height="75%" 
-           data-dw-widget="Edge" 
-           data="/animations/city.html">
-        </object>
-      </div>  
-      <div class="homepage-content">
-        <h5 class="mainheader" >
-          Multi-Disiplinary <div class="CreativeAgency">Creative Agency</div>
-          <p class="basedinmnpls">Based in Minneapolis, MN.</p>
-        </h5>    
-        <div class="set-appointment">
-          <div class="hvr-bob">
-              <a href="#step3"><button>Make an Appointment</button></a>
-          </div>
-        </div>
-        <div class="animated infinite pulse next-button ">
-          <a id="show-next-page">
-            <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i></a>
-        </div>
-      </div>
-        </div>
-        <div class="item" id="step_2">
-          <div> 
-            <div class="heart animated"> 
+  <div class="bg-info">
+    <div class="container">
+      <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active" id="city-animation step_1">
+            <div class="heart animated infinite pulse"> 
               <object id="EdgeID" 
                  type="text/html" 
-                 width="100%" height="60%" 
+                 width="100%" height="75%" 
                  data-dw-widget="Edge" 
-                 data="/animations/table.html">
+                 data="/animations/city.html">
               </object>
-              <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
-            </div> 
-            <div class="secondnextbutton">
+            </div>  
+            <div class="homepage-content">
+              <h5 class="mainheader" >
+                Multi-Disiplinary <div class="CreativeAgency">Creative Agency</div>
+                <p class="basedinmnpls">Based in Minneapolis, MN.</p>
+              </h5>    
+              <div class="set-appointment">
+                <div class="hvr-bob">
+                    <a href="#step3"><button>Make an Appointment</button></a>
+                </div>
+              </div>
               <div class="animated infinite pulse next-button ">
-                <a href="#step3" id="show-next-page2">
-                  <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i>
-                </a>
+                <a id="show-next-page">
+                  <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i></a>
               </div>
             </div>
           </div>
+          <div class="item" id="step_2">
+            <div> 
+              <div class="heart animated"> 
+                <object id="EdgeID" 
+                   type="text/html" 
+                   width="100%" height="60%" 
+                   data-dw-widget="Edge" 
+                   data="/animations/table.html">
+                </object>
+                <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
+              </div> 
+              <div class="secondnextbutton">
+                <div class="animated infinite pulse next-button ">
+                  <a href="#step3" id="show-next-page2">
+                    <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="step_3">
+            <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
+          </div>
         </div>
-        <div class="item" id="step_3">
-          <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
-        </div>
-
-      <!-- Controls -->
-      <<!-- a class="up carousel-control" href="#carousel-example-vertical" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="down carousel-control" href="#carousel-example-vertical" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a> -->
+      </div>
     </div>
   </div>
-</div>
-</div>
   <nav id="social">
-  <ul>
-  <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
-  <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
-  <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
-  </ul>
+    <ul>
+      <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
+      <li><a href="Message">Message us <i class="fa fa-commenting"></i></a></li>
+      <li><a href="mailto:Sam@mrwcreations.co,">Email us <i class="fa fa-envelope "></i></a></li>
+    </ul>
   </nav>
-
 <script src="/js/custom.js"></script>
 <script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
 </body>

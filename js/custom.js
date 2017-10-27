@@ -59,7 +59,7 @@ $("#show-next-page").on('click', function(){
 });
 $(document).ready(function(){
   // Code to hide all other divs until animation loads
-  if(document.location.hash === ""){
+  if(document.location.hash === "" && window.location.href.indexOf("contact-us.html") < 0){
     $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
     setTimeout(function(){}, 4000); 
   }
