@@ -1,6 +1,6 @@
 ![MRW Creations](https://mrwcreations.org/wp-content/uploads/2017/03/NewLogo-300x120.jpg)
 
-## Concept Design for [MRWCreations](https://mrwcreations.org)
+## Design for [MRWCreations](https://mrwcreations.org)
 
 **Contact Info:**
 
