@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 body{
     font-family: 'Cuprum', sans-serif;
 }
@@ -441,6 +442,10 @@ label {
     -ms-user-select: none;
     user-select: none;
     width: 3.6rem;
+    background-color: #746680;
+}
+.icon-button:hover{
+    background-color:#fbf7fb; 
 }
 
 
@@ -718,7 +723,7 @@ p{
 .Tripodp{
     font-family: 'cuprum';
     line-height: 1.3 !important ;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: justify;
 }
 .label.col-md-2.control-label{
@@ -730,10 +735,10 @@ p{
 }
 .title{
     
-    margin-top: 45px;
-    font-family: 'cuprum';
+    
+    font-family: 'anton';
     color: #330033;
-    font-weight: bold;
+    font-weight: lighter;
     text-align: center;
 
 }
@@ -759,10 +764,13 @@ p{
 }
 div.next button.submit.btn.btn-primary
 {
-    width: 200px;
+    width: 100px !important;
     background-color: #bce5a6 ;
     border:none;
-    color: black;
+        color: black
+
+
+
 
 }
 .next .btn-primary:hover{
@@ -896,9 +904,7 @@ html.js.csstransitions body section#testimonials.pfblock-gray div.row div#cbp-qt
 
     }
 }
-.Tripodp{
 
-}
 .input{
     background-color: #fbf7fb;
 }
@@ -918,7 +924,8 @@ html.js.csstransitions body section#testimonials.pfblock-gray div.row div#cbp-qt
     margin-bottom: 15px;
 }
 button.hvr-grow{
- margin-bottom: 15px;   
+ margin-bottom: 15px;  
+ color: #fbf7fb; 
 }
 #side-login > label:nth-child(2) > b:nth-child(1){
     color: #fbf7fb;
@@ -944,6 +951,33 @@ margin-right: auto;
 .services-tab{
     margin-top: -20px;
 }
+@media only screen and (max-width: 950px) {
+.title{ 
+
+}
+  .services-tab{
+    margin-top: -40px;
+}
+.Tripodtitle{
+        font-size: 2.1rem !important;
+    font-family: 'anton';
+    margin-bottom: -10px !important;
+    color: #330033;
+    text-align: center;
+    font-weight: lighter;
+
+}
+.Tripodp{
+    font-family: 'lato';
+    line-height: 1.2 !important ;
+    font-size: 1.2rem;
+    text-align: justify;
+        text-indent: 35px;
+}
+
+
+}
+
  #show-next-page2:hover{
     color: #746680;
  } 
@@ -953,4 +987,185 @@ margin-right: auto;
  } 
 html body div.container div.row div.card.feed div#all.col.s12.active{
     margin-bottom: 20px;
+}
+
+.links {
+    color:#fbf7fb;
+}
+#side-login > label:nth-child(2) > b:nth-child(1){
+    color: #fbf7fb;
+}
+
+
+
+.g-recaptcha{
+    top:0;
+    
+}
+
+.next{
+margin-right: 20%;
+ clear: none;
+
+}
+
+html body div.container div.step2 form.form-horizontal.contact-form div.form-group{
+    padding-right: 30px;}
+
+html body div.container div.row div.card.feed ul#tabs-swipe.tabs.tabs-fixed-width li.tab.col.s3{
+width: 35%;
+}
+#table-animation{
+    display: block !important;
+}
+.container{
+    max-width: 1020px !important;
+}
+.bg-info .item{
+  height: 100% !important;
+}
+.bg-info{
+  background: none !important;
+}
+body {
+  margin: 0;
+}
+.ticker-headline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.carousel.vertical .carousel-inner {
+ /* height: 100%;*/
+  width: auto;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel.vertical .carousel-inner > .item {
+    -webkit-transition: 0.6s ease-out;
+    transition: 0.6s ease-out;
+  }
+  .carousel.vertical .carousel-inner > .item.next, .carousel.vertical .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    top: 0;
+  }
+  .carousel.vertical .carousel-inner > .item.prev, .carousel.vertical .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    top: 0;
+  }
+
+.carousel.vertical .carousel-inner > .active,
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+  display: block;
+}
+.carousel.vertical .carousel-inner > .active {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel.vertical .carousel-inner > .next {
+  top: 100%;
+}
+.carousel.vertical .carousel-inner > .prev {
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .next.left,
+.carousel.vertical .carousel-inner > .prev.right {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .active.left {
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .carousel-control {
+  left: auto;
+  width: 50px;
+}
+.carousel.vertical .carousel-control.up {
+  top: 0;
+  right: 0;
+  bottom: 50%;
+}
+.carousel.vertical .carousel-control.down {
+  top: 50%;
+  right: 0;
+  bottom: 0;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-up,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .glyphicon-chevron-up {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-up,
+.carousel.vertical .carousel-control .icon-down {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  font-family: serif;
+}
+.carousel.vertical .carousel-control .icon-prev:before {
+  content: '\2039';
+}
+.carousel.vertical .carousel-control .icon-next:before {
+  content: '\203a';
+}
+#right-curve{
+  height:200px; 
+  float;right; 
+  position:fixed; 
+  right:0; 
+  pointer-events: none;
+}
+#menu_hamburger{
+  position:fixed;
+  right: 10;
+}
+#mySidenav{
+  position: fixed;
+}
+#side-logo{
+  display: inline; 
+  opacity: 1; 
+  transition: 1.5s;
+}
+#client-submit-button{
+  float:right; 
+  margin-right:50px; 
+  color:#fbf7fb;
+}
+.fb-connect{
+  float:right; 
+  padding-right: 39px;
 }
