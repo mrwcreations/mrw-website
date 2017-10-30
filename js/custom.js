@@ -1,5 +1,9 @@
 "use strict";
 
+var step1 = "#homepage";
+var step2 = "#about_us";
+var step3 = "#schedule_meeting";
+
 var toggles = document.querySelectorAll(".c-hamburger");
 
 for (var i = toggles.length - 1; i >= 0; i--) {
@@ -86,24 +90,24 @@ $(document).ready(function(){
   $carousel.bind('slide.bs.carousel', function(e){
     var childsList = Array.prototype.slice.call( $('.carousel').children );
     if(e.relatedTarget.outerHTML.indexOf("step_1") > 0){
-      window.location.hash = "#step1";
+      window.location.hash = step1;
     } else if(e.relatedTarget.outerHTML.indexOf("step_2") > 0){
-      window.location.hash = "#step2";
+      window.location.hash = step2;
     } else if(e.relatedTarget.outerHTML.indexOf("step_3")){
-      window.location.hash = "#step3";
+      window.location.hash = step3;
     }
   });
   function hashChange(input_hash){
     switch(input_hash){
-      case "#step1":
+      case step1:
         pushAnalytics();
         $carousel.carousel(0);
         break;
-      case "#step2":
+      case step2:
         pushAnalytics();
         $carousel.carousel(1);
         break;
-      case "#step3":
+      case step3:
         pushAnalytics();
         $carousel.carousel(2);
         break;
