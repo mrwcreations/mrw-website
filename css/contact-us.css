@@ -1,0 +1,37 @@
+body{
+	font-family: 'Cuprum', sans-serif;
+}
+@media(max-width: 990px){
+	.input-group, .control-label{
+		text-align: left !important;
+		width: 90% !important;
+		padding-left: 20px !important;
+	}
+	.datetimepicker{
+		left: 40px !important;
+	}
+	legend{
+		margin-bottom: 8px !important;
+	}
+	.form-group{
+		margin-bottom: 10px !important;
+	}
+	.title-help, .project-description{
+		display: none;
+	}
+}
+/*.form-submit-successful,*/ .form-submit-failure, #error{
+	display: none;
+}
+#myModal{
+	margin-top: 175px;
+}
+.modal-title{
+	float: left;
+}
+button .close{
+	float: right;
+}
+.input-group[class*=col-]{
+	width: 80% !important;
+}
