@@ -136,7 +136,7 @@ $(document).ready(function(){
         break;
       default:
         $carousel.carousel(0);
-        document.title = navigation.step[3].title;
+        document.title = navigation.step[0].title;
     }
   }
   function pushAnalytics(){
