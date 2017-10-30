@@ -13,3 +13,5 @@ gulpfile.js
 diff-index.txt
 /temp/
 /scripts/**/*.ini
+new-index.html
+vino-shipper.html
