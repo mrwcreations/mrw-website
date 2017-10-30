@@ -26,6 +26,12 @@ body{
 	.title-help, .project-description{
 		display: none;
 	}
+	form{
+		margin-top: 75px !important;
+	}
+	div.next button.submit.btn.btn-primary{
+		width: 100% !important;
+	}
 }
 /*.form-submit-successful,*/ .form-submit-failure, #error{
 	display: none;
@@ -41,4 +47,7 @@ button .close{
 }
 .input-group[class*=col-]{
 	width: 80% !important;
+}
+form{
+	margin-top
 }

@@ -11,7 +11,7 @@
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		  crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCp96dftuw41PZ3L4AR_iBPAATdo6Zb3H4&sensor=false&libraries=places&language=en-US"></script>
+		<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCp96dftuw41PZ3L4AR_iBPAATdo6Zb3H4&libraries=places&language=en-US"></script>
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/bootstrap-datetime-picker.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js' aysnc defer></script>
@@ -81,17 +81,17 @@
 					    	<small id="error" class="text-danger">Please enter a valid address</small>
 					    </div>
 					 </div>
-					 <div class="form-group">
+					 <!-- <div class="form-group">
 					 	<label for="" class="col-md-2 control-label"></label>
-					 	<div class="g-recaptcha col-md-5" data-sitekey="6LeimzMUAAAAAEaRQou6AWXNaOYez4I2zlJcPVJ_">
+					 	<div class="g-recaptcha col-md-5" data-callback="onLoad" data-sitekey="6LcXODYUAAAAAL-LUkiawVaDnRd5rMJmXH12veU2" data-size="invisible">
 					 	</div>
 					 </div>
 					 <div class="form-group">
 					 	<label class="col-md-2 control-label"></label>
 					 	<div class="col-md-5 captcha"><small id="error" class="text-danger">Please verify captcha</small></div>
-					 </div>
+					 </div> -->
 					 <div class="next">
-					 	<button  type="submit" class="submit btn btn-primary">Submit</button><br/>
+					 	<button data-size="invisible" data-callback="onRecaptcha" data-sitekey="6LcXODYUAAAAAL-LUkiawVaDnRd5rMJmXH12veU2" type="submit" class="submit g-recaptcha btn btn-primary" data-badge="bottomright" >Submit</button><br/>
 					 </div>
 					 <div><span class="form-text text-muted">* - Required Fields</span></div>
 				</form>
