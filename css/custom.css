@@ -963,9 +963,10 @@ margin-right: auto;
 }
 
 .next{
+    margin-left: 0%;
 
  clear: none;
- margin-left: 0%;
+
 
 }
   .services-tab{
