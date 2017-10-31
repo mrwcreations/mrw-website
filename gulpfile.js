@@ -1,3 +1,4 @@
+
 var gulp = require('gulp'); // Require gulp
 
 var minifyCSS = require('gulp-minify-css'); // Minify the CSS
@@ -6,6 +7,9 @@ var minifyHTML = require('gulp-minify-html'); // Minify HTML
 var stripDebug = require('gulp-strip-debug'); // Remove debugging stuffs
 var uglify = require('gulp-uglify'); // Minify JavaScript
 var imagemin = require('gulp-imagemin'); // Minify images
+var gutil = require( 'gulp-util' );
+var ftp = require( 'vinyl-ftp' );
+
 
 gulp.task('styles', function() {
   gulp.src('css/**/*.css')
@@ -41,5 +45,28 @@ gulp.task('movefiles', function() {
 	gulp.src('css/font-awesome/fonts/*.*')
 	 .pipe(gulp.dest('dist/css/font-awesome/fonts/'));
 });
+
+gulp.task( 'deploy', function () {
+
+  var conn = ftp.create( {
+    host:     'home617787432.1and1-data.host',
+    user:     'u84366911-amitnandan',
+    password: 'Nandan1!',
+    log:      gutil.log,
+    idleTimeout: 10000
+  } );
+
+  var globs = [
+    'dist/**/*',
+  ];
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+
+  return gulp.src( globs, { base: '.' } )
+    .pipe( conn.newer( '/beta2' ) ) // only upload newer files
+    .pipe( conn.dest( '/beta2' ) );
+
+} );
 
 gulp.task('minifyall',['styles', 'scripts', 'html', 'images', 'movefiles']);

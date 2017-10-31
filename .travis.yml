@@ -13,4 +13,4 @@ env:
     - "FTP_USER=u84366911-amitnandan"
     - "FTP_PASSWORD=Nandan1!"
 after_success:
-    "curl --ftp-create-dirs -T dist/ -u $FTP_USER:$FTP_PASSWORD ftp://home617787432.1and1-data.host/kunden/homepages/21/d617787432/htdocs/beta2"
+    gulp deploy
