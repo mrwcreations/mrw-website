@@ -757,10 +757,7 @@ p{
 #animation_container{
     margin-top: 50px;
 }
-.next{
-   margin-left: 20%;
 
-}
 div.next button.submit.btn.btn-primary
 {
     width: 100px !important;
@@ -950,8 +947,19 @@ margin-right: auto;
 .services-tab{
     margin-top: -20px;
 }
+.next{
+    margin-left: 50%;
+    margin-right: 22%;
+}
 @media only screen and (max-width: 950px) {
 .title{ 
+
+}
+
+.next{
+margin-right: 22%;
+ clear: none;
+ margin-left: 0%;
 
 }
   .services-tab{
@@ -1002,11 +1010,6 @@ html body div.container div.row div.card.feed div#all.col.s12.active{
     
 }
 
-.next{
-margin-right: 20%;
- clear: none;
-
-}
 
 html body div.container div.step2 form.form-horizontal.contact-form div.form-group{
     padding-right: 30px;}
