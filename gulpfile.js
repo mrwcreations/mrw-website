@@ -49,7 +49,7 @@ gulp.task('movefiles', function() {
 	 .pipe(gulp.dest('dist/css/font-awesome/fonts/'));
 });
 
-gulp.task( 'deploy', function () {
+gulp.task( 'deploy-beta', function () {
 
   var conn = ftp.create( {
     host:     args.host,
@@ -70,6 +70,29 @@ gulp.task( 'deploy', function () {
     .pipe( conn.newer( '/beta' ) ) // only upload newer files
     .pipe( conn.dest( '/beta' ) );
 
-} );
+});
+
+gulp.task( 'deploy-prod', function () {
+
+  var conn = ftp.create( {
+    host:     args.host,
+    user:     args.user,
+    password: args.password,
+    log:      gutil.log,
+    idleTimeout: 10000
+  } );
+
+  var globs = [
+    'dist/**/*',
+  ];
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+
+  return gulp.src( globs, { base: '.', buffer: false } )
+    .pipe( conn.newer( '/prod' ) ) // only upload newer files
+    .pipe( conn.dest( '/prod' ) );
+
+});
 
 gulp.task('minifyall',['styles', 'scripts', 'html', 'images', 'movefiles']);
