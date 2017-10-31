@@ -343,7 +343,7 @@ label {
     }
     #social {
         position: fixed;
-        top: 400px;
+        top: 200px;
         display: none;
         transition: .5s;
         
@@ -352,7 +352,7 @@ label {
 }
 #social {
     position: fixed;
-    top: 400px;
+    top: 200px;
     width: 0px;
 
 }
@@ -602,8 +602,7 @@ label {
 }
 #show-next-page {
     cursor: pointer;
-    font-size: 38px;
-    opacity: 0.5;
+    font-size: 30px;
     margin-right: 10px;
 }
 .table-animation-content {
@@ -970,7 +969,7 @@ margin-right: auto;
 .Tripodp{
     font-family: 'lato';
     line-height: 1.2 !important ;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: justify;
         text-indent: 35px;
 }
