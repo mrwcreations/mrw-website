@@ -17,9 +17,7 @@ var navigation = {
   ]
 };
 
-var step1 = "#homepage";
-var step2 = "#about_us";
-var step3 = "#schedule_meeting";
+var domain = "www.mrwcreations.org";
 
 var toggles = document.querySelectorAll(".c-hamburger");
 
@@ -140,6 +138,7 @@ $(document).ready(function(){
     }
   }
   function pushAnalytics(){
-    ga('send', 'pageview', {'page': location.pathname+location.search+location.hash});
+    if(document.domain === domain)
+      ga('send', 'pageview', {'page': location.pathname+location.search+location.hash});
   }
 });
