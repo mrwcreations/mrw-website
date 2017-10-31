@@ -40,8 +40,9 @@ gulp.task('images', function() {
 });
 
 gulp.task('movefiles', function() {
-	gulp.src('.htaccess')
-	 .pipe(gulp.dest('dist/'));
+  // Removing .htaccess for the meanwhile to disable https redirections on beta website
+	// gulp.src('.htaccess')
+	//  .pipe(gulp.dest('dist/'));
 	gulp.src('css/font-awesome/fonts/*.*')
 	 .pipe(gulp.dest('dist/css/font-awesome/fonts/'));
 });
