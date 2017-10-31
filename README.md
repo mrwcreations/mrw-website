@@ -1,6 +1,6 @@
 ![MRW Creations](https://mrwcreations.org/wp-content/uploads/2017/03/NewLogo-300x120.jpg)
 
-## Design for [MRWCreations](https://mrwcreations.org) ![Travis-Build-Status](https://travis-ci.org/mrwcreations/mrw-website.svg?branch=master)
+## Design for [MRWCreations](https://mrwcreations.org) [![Build Status](https://travis-ci.org/mrwcreations/mrw-website.svg?branch=master)](https://travis-ci.org/mrwcreations/mrw-website)
 
 **Contact Info:**
 
