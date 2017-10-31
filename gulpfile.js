@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify'); // Minify JavaScript
 var imagemin = require('gulp-imagemin'); // Minify images
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
+var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 
 
