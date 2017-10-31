@@ -1,4 +1,4 @@
-# Ignore SFTP Configuration file.
+# Ignore SFTP Configuration file
 sftp-config.json
 # Ignore file system files
 /**/.DS_Store
