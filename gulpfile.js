@@ -10,7 +10,7 @@ var imagemin = require('gulp-imagemin'); // Minify images
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 var minimist = require('minimist');
-var args = minimist(process.argv.slice(2));
+var args = minimist(process.argv.slice(3));
 
 
 gulp.task('styles', function() {
@@ -52,7 +52,7 @@ gulp.task('movefiles', function() {
 gulp.task( 'deploy', function () {
 
   var conn = ftp.create( {
-    host:     'home617787432.1and1-data.host',
+    host:     args.host,
     user:     args.user,
     password: args.password,
     log:      gutil.log,
