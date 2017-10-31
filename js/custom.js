@@ -8,7 +8,7 @@ var navigation = {
     },
     {
       hash: "#about_us",
-      title: "About Us >>MRW Creations - Artistry, Design and Development"
+      title: "About Us >> MRW Creations - Artistry, Design and Development"
     },
     {
       hash: "#schedule_meeting",
