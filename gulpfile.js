@@ -12,13 +12,13 @@ var ftp = require( 'vinyl-ftp' );
 
 
 gulp.task('styles', function() {
-  gulp.src('css/**/*.css')
+  gulp.src(['css/**/*.css', '!node_modules/**/*'])
     .pipe(minifyCSS({processImport: false}))
     .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('scripts', function() {
-  gulp.src(['js/**/*.js'])
+  gulp.src(['js/**/*.js', '!node_modules/**/*'])
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
@@ -26,7 +26,7 @@ gulp.task('scripts', function() {
 
 
 gulp.task('html', function() {
-  gulp.src('**/*.html')
+  gulp.src(['**/*.html', '!node_modules/**/*', '!mailer/**/*'])
     .pipe(minifyHTML())
     .pipe(gulp.dest('dist'));
 });
