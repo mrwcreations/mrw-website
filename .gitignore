@@ -7,6 +7,8 @@ sftp-config.json
 /js/min/
 /css/min/
 /dist/
+# Ignore node_modules files generated from npm install
+/node_modules
 # Ignore files that are not required
 diff-index.txt
 /temp/
