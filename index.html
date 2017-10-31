@@ -10,9 +10,12 @@
   <meta name="keywords" content="Design, Artistry, Development, Technology, Start-up, Minneapolis, Minnesota, Website, Web Design, Software, Brand Identity, Branding">
   <!-- Google Analytics -->
   <script>
+  var domain = "www.mrwcreations.org";
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-69553833-1', 'auto');
-  ga('send', 'pageview');
+  if(document.domain === domain){
+    ga('create', 'UA-69553833-1', 'auto');
+    ga('send', 'pageview');
+  }
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
 
