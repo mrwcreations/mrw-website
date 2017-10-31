@@ -640,7 +640,7 @@ label {
 }
 .Basedinmnpls {
     font-family: 'anton' !important;
-    font-size: 1.9rem !important;
+    font-size: 1.7rem !important;
     font-weight: lighter !important;
 
     color: #330033;
@@ -899,6 +899,12 @@ html.js.csstransitions body section#testimonials.pfblock-gray div.row div#cbp-qt
             letter-spacing: 0.01em !important;
 
     }
+    .button, button, input[type="submit"], input[type="reset"], input[type="button"]{
+        height: 27px;
+    }
+    .set-appointment{
+        bottom: 7%;
+    }
 }
 
 .input{
@@ -909,7 +915,7 @@ html.js.csstransitions body section#testimonials.pfblock-gray div.row div#cbp-qt
     font-weight: bold;
     font-family: 'anton' !important;
     margin-top: 2px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .clientlogin > input:nth-child(1){
@@ -966,7 +972,7 @@ margin-right: 22%;
     margin-top: -40px;
 }
 .Tripodtitle{
-        font-size: 2.1rem !important;
+        font-size: 1.5rem !important;
     font-family: 'anton';
     margin-bottom: -10px !important;
     color: #330033;
@@ -976,7 +982,7 @@ margin-right: 22%;
 }
 .Tripodp{
     font-family: 'lato';
-    line-height: 1.2 !important ;
+    line-height: 1rem !important ;
     font-size: 1rem;
     text-align: justify;
         text-indent: 35px;
