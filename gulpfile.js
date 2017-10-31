@@ -63,9 +63,9 @@ gulp.task( 'deploy', function () {
   // using base = '.' will transfer everything to /public_html correctly
   // turn off buffering in gulp.src for best performance
 
-  return gulp.src( globs, { base: '.' } )
-    .pipe( conn.newer( '/beta2' ) ) // only upload newer files
-    .pipe( conn.dest( '/beta2' ) );
+  return gulp.src( globs, { base: '.', buffer: false } )
+    .pipe( conn.newer( '/beta' ) ) // only upload newer files
+    .pipe( conn.dest( '/beta' ) );
 
 } );
 
