@@ -49,6 +49,12 @@ gulp.task('movefiles', function() {
 	 .pipe(gulp.dest('dist/css/font-awesome/fonts/'));
 });
 
+function copyHtaccess(){
+  // Removing .htaccess for the meanwhile to disable https redirections on beta website
+  gulp.src('.htaccess')
+   .pipe(gulp.dest('dist/'));
+};
+
 gulp.task( 'deploy-beta', function () {
 
   var conn = ftp.create( {
@@ -73,6 +79,8 @@ gulp.task( 'deploy-beta', function () {
 });
 
 gulp.task( 'deploy-prod', function () {
+
+  copyHtaccess();
 
   var conn = ftp.create( {
     host:     args.host,
