@@ -10,7 +10,7 @@
 	* *Create a new branch for the issue with #issueID in the title.*
 	* *Checkout the branch on your local machine.*
 	* *Fix and verify the issue is resolved on your local machine.*
-	* *Create a pull request on the branch adding @amitnndn or @sammorrow147.*
+	* *Create a pull request on the branch adding @amitnndn or @sammorrow147 as reviewers.*
 	* *For the code to be merged, the code should pass the build.*
 * Builds are set up on [Travis CI](https://travis-ci.org/mrwcreations/mrw-website). 
 * Releases are named after [DC Characters](http://www.dccomics.com/characters).
