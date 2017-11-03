@@ -1177,3 +1177,19 @@ body {
   float:right; 
   padding-right: 39px;
 }
+.error-template{
+    margin-top: 50px;
+    text-align: center;
+}
+.error-actions {margin-top:30px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; background-color: #330033; }
+a.btn:nth-child(2){
+    color: white;
+}
+.error-template > h1:nth-child(1){
+    font-size: 6em;
+}
+
+.title1{
+    margin-top: 5%;
+}

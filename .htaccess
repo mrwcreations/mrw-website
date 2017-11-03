@@ -9,6 +9,10 @@ RewriteRule ^history(.*)$ https://www.mrwcreations.org/#about_us [R=301,L,NE]
 RewriteRule ^schedule-meeting(.*)$ https://www.mrwcreations.org/#schedule_meeting [R=301,L,NE]
 
 
+# 404 Document Redirect
+ErrorDocument 404 /404.html
+
+
 # Cache-control headers
 # 2 HOURS
 #<filesMatch "*">
