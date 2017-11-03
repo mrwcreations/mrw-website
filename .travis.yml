@@ -6,7 +6,7 @@ install:
 script: 
   - gulp minifyall
   - if [ "$TRAVIS_BRANCH" = "beta" ]; then gulp deploy-beta --user $FTP_USER --password $FTP_PASSWORD --host $FTP_HOST; fi
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then gulp deploy-prod --user $FTP_USER --password $FTP_PASSWORD --host $FTP_HOST; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then gulp copy-htaccess deploy-prod --user $FTP_USER --password $FTP_PASSWORD --host $FTP_HOST; fi
 branches:
   only:
   - master
