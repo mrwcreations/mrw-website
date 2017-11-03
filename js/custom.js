@@ -102,6 +102,9 @@ $(document).ready(function(){
   window.onhashchange = function(){
     hashChange(document.location.hash);
   }
+  $('.links a').on('click', function(){
+    closeNav();
+  });
   $carousel.bind('slide.bs.carousel', function(e){
     var childsList = Array.prototype.slice.call( $('.carousel').children );
     if(e.relatedTarget.outerHTML.indexOf("step_1") > 0){
