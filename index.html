@@ -32,6 +32,27 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/hover.css">
   <link rel="stylesheet" type="text/css" href="css/carousel.css" rel="stylesheet" type="text/css" >
+  <style>
+    #notification{
+      padding: 5px;
+      position: absolute;
+      top: 10;
+      width: 100%;
+      margin: 0 auto;
+      /* height: 30px; */
+      z-index: 100;
+     /* margin-left: 100px;*/
+    }
+    @media(max-width: 750px){
+      #notification{
+        width: 60%;
+        margin-left: 100px;
+      }
+      #notification .close {
+        font-size: 65px;
+      }
+    }
+  </style>
 </head>
 <body translate="no" >
   <!-- Google Tag Manager (noscript) -->
@@ -81,8 +102,9 @@
       </div>
     </div>
   </div>
-  <div class="bg-info">
+  <div class="bg-info">    
     <div class="container">
+      <div class="notificaiton-bar"></div>
       <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
         <div class="carousel-inner" role="listbox">
           <div class="item active" id="city-animation step_1">

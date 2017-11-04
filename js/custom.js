@@ -81,7 +81,7 @@ $("#show-next-page").on('click', function(){
 $(document).ready(function(){
   // Code to hide all other divs until animation loads
   if(document.location.hash === "" && window.location.href.indexOf("contact-us.html") < 0){
-    $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, .show-next-page, .c-hamburger").hide().delay(4200).fadeIn(1000);
+    $("#logodiv, .Weoperate, img, .mainheader, .Undertable, .set-appointment, .show-next-page, .notificaiton-bar, .c-hamburger").hide().delay(4200).fadeIn(1000);
     setTimeout(function(){}, 4000); 
   }
   if($(window).width() <= 720){
@@ -143,5 +143,9 @@ $(document).ready(function(){
   function pushAnalytics(){
     if(document.domain === domain)
       ga('send', 'pageview', {'page': location.pathname+location.search+location.hash});
+  }
+  function createPopUpMessages(){
+    var popup_message = 'We will be exhibiting and selling some of our artwork at the <a href="http://www.pancakesandbooze.com/">Pancakes and Booze Art Show</a> in <a href="https://www.cabooze.com/">Cabooze</a> tonight from 7:00PM to 2:00AM. Stop-by and support our in-house and local artists from the Minneapolis and St. Paul Metro area!';
+    $(".notificaiton-bar").html('<div class="alert alert-success" id="notification"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'+popup_message+'</div>');
   }
 });
