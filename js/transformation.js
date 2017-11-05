@@ -6,7 +6,19 @@ else if (window.addEventListener) //WC3 browsers
     window.addEventListener(mousewheelevt, function(e){scrollEvent(e)}, false)
 $(window).on('touchstart', touchStart);
 $(window).on('touchend', touchEnd);
+$(window).keypress(onSpaceKeyPress);
 $(document).on('click', closeNavOnClickDocument);
+function onSpaceKeyPress(e){
+  if(e.keyCode === 0 || e.keyCode === 32){
+    e.preventDefault();
+    if(e.shiftKey){
+      $(".carousel").carousel("prev");
+    }
+    else{
+      $(".carousel").carousel('next');
+    }
+  }
+}
 function scrollEvent(e){
   var evt = window.event || e;
   var delta = evt.detail? evt.detail*(-4) : evt.wheelDelta;

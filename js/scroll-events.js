@@ -7,4 +7,5 @@ else if (window.addEventListener) //WC3 browsers
 // $(window).on("on"+mousewheelevt, parent.scrollEvent);
 $(window).on('touchstart', parent.touchStart);
 $(window).on('touchend', parent.touchEnd);
+$(window).keypress(parent.onSpaceKeyPress);
 $(document).on('click', parent.closeNavOnClickDocument);
