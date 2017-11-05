@@ -1,24 +1,20 @@
 body{
 	font-family: 'Cuprum', sans-serif;
+	width: 100%;
+    background: linear-gradient(358deg, #d7cad7, #ffffff);
 }
-@media(max-width: 990px){
-	.input-group, .control-label{
-		text-align: left !important;
-		width: 90% !important;
-		padding-left: 20px !important;
-	}
-	.datetimepicker{
-		left: 40px !important;
-	}
-	legend{
-		margin-bottom: 8px !important;
-	}
-	.form-group{
-		margin-bottom: 10px !important;
-	}
-	.title-help, .project-description{
-		display: none;
-	}
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+form{
+	margin-top: 20px;
+}
+.input-group[class*=col-]{
+	width: 80% !important;
+}
+.input-group[class*=col-]>input{
+	background-color: #fbf7fb;
 }
 /*.form-submit-successful,*/ .form-submit-failure, #error{
 	display: none;
@@ -32,6 +28,8 @@ body{
 button .close{
 	float: right;
 }
-.input-group[class*=col-]{
-	width: 80% !important;
+@media(max-width: 750px){
+	.input-group[class*=col-]{
+		width: 100% !important;
+	}
 }
