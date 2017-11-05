@@ -321,6 +321,13 @@ label {
     margin-top: -190px;
 }
 @media only screen and (max-width: 720px) {
+    .click_space{
+        display: none;
+    }
+    #show-next-page{
+        margin-left: 0px !important; 
+    }
+
     #mobile-text {
         display: inline;
         text-align: center;
@@ -603,7 +610,7 @@ label {
 #show-next-page {
     cursor: pointer;
     font-size: 30px;
-    margin-right: 10px;
+    margin-left: 25px;
 }
 .table-animation-content {
     position: absolute;
@@ -947,7 +954,7 @@ margin-left: auto;
 margin-right: auto;
 }
 #show-next-page2{
-    margin-left: 20%;
+    margin-left: 35%;
 }
 
 .services-tab{
