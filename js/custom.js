@@ -2,18 +2,18 @@
 
 var navigation = {
   step: [
-    {
-      hash: "#homepage",
-      title: "Home Page >> MRW Creations - Artistry, Design and Development"
-    },
-    {
-      hash: "#about_us",
-      title: "About Us >> MRW Creations - Artistry, Design and Development"
-    },
-    {
-      hash: "#schedule_meeting",
-      title: "Schedule Meeting >> MRW Creations - Artistry, Design and Development"
-    }
+  {
+    hash: "#homepage",
+    title: "Home Page >> MRW Creations - Artistry, Design and Development"
+  },
+  {
+    hash: "#about_us",
+    title: "About Us >> MRW Creations - Artistry, Design and Development"
+  },
+  {
+    hash: "#schedule_meeting",
+    title: "Schedule Meeting >> MRW Creations - Artistry, Design and Development"
+  }
   ]
 };
 
@@ -33,7 +33,7 @@ function toggleHandler(toggle) {
    if(this.classList.contains("is-active") === true) {
     this.classList.remove("is-active")
   }
- });
+});
 }
 $(".c-hamburger--htra open").on('click', openNav);
 $(".closebtn").on('click', closeNav);
@@ -69,8 +69,8 @@ function closeNav() {
   $(".bg-info").css('width', '100%');
   $(".item").css('width', '100%');
   if($(window).width() <= 720){
-     $("#social").hide();
-  }
+   $("#social").hide();
+ }
 }
 $(".carousel").carousel({
   interval: false
@@ -126,23 +126,23 @@ $(document).ready(function(){
   function hashChange(input_hash){
     switch(input_hash){
       case navigation.step[0].hash:
-        pushAnalytics();
-        $carousel.carousel(0);
-        document.title = navigation.step[0].title;
-        break;
+      pushAnalytics();
+      $carousel.carousel(0);
+      document.title = navigation.step[0].title;
+      break;
       case navigation.step[1].hash:
-        pushAnalytics();
-        $carousel.carousel(1);
-        document.title = navigation.step[1].title;
-        break;
+      pushAnalytics();
+      $carousel.carousel(1);
+      document.title = navigation.step[1].title;
+      break;
       case navigation.step[2].hash:
-        pushAnalytics();
-        $carousel.carousel(2);
-        document.title = navigation.step[2].title;
-        break;
+      pushAnalytics();
+      $carousel.carousel(2);
+      document.title = navigation.step[2].title;
+      break;
       default:
-        $carousel.carousel(0);
-        document.title = navigation.step[0].title;
+      $carousel.carousel(0);
+      document.title = navigation.step[0].title;
     }
   }
   function pushAnalytics(){

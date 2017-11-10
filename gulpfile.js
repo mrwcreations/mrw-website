@@ -47,6 +47,10 @@ gulp.task('movefiles', function() {
 	//  .pipe(gulp.dest('dist/'));
 	gulp.src('css/font-awesome/fonts/*.*')
 	 .pipe(gulp.dest('dist/css/font-awesome/fonts/'));
+  gulp.src('sitemap.xml')
+    .pipe(gulp.dest('dist/'));
+  gulp.src('robots.txt')
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('copy-htaccess', function(){
