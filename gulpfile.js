@@ -50,7 +50,7 @@ gulp.task('movefiles', function() {
   gulp.src('sitemap.xml')
     .pipe(gulp.dest('dist/'));
   gulp.src('robots.txt')
-    .pipt(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('copy-htaccess', function(){
