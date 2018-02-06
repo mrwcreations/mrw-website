@@ -10,17 +10,33 @@
   <meta name="keywords" content="Design, Artistry, Development, Technology, Start-up, Minneapolis, Minnesota, Website, Web Design, Software, Brand Identity, Branding">
   <!-- Google Analytics -->
   <script>
-  var domain = "www.mrwcreations.org";
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  if(document.domain === domain){
-    ga('create', 'UA-69553833-1', 'auto');
-    ga('send', 'pageview');
-  }
+    var domain = "www.mrwcreations.org";
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    if(document.domain === domain){
+      ga('create', 'UA-69553833-1', 'auto');
+      ga('send', 'pageview');
+    }
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
-
+  <!-- Facebook Pixel Code -->
+  <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '552995515033886');
+        fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=552995515033886&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
   <!-- Mobile Specific Metas
-   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
@@ -41,7 +57,7 @@
       margin: 0 auto;
       /* height: 30px; */
       z-index: 100;
-     /* margin-left: 100px;*/
+      /* margin-left: 100px;*/
     }
     @media(max-width: 750px){
       #notification{
@@ -57,26 +73,26 @@
 <body translate="no" >
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KND92ZX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <header id="curve">
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="curve">
      <div id="logodiv" class="animated fadeinleft">
-          <a href="#homepage"><img src="/images/header.gif" alt="MRW Creations" id="logo" Class="hvr-forward"></a>
-     </div>
-     <div id="hamburger">
-        <img class="animated fadeinright" alt="MRW Creations" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0; pointer-events: none;"
-           id="right-curve">
-        <a class="c-hamburger c-hamburger--htra open hvr-grow" onclick="openNav()" style="position:fixed; right: 10;">
-          <span></span>
-        </a>
-     </div>
+      <a href="#homepage"><img src="/images/header.gif" alt="MRW Creations" id="logo" Class="hvr-forward"></a>
+    </div>
+    <div id="hamburger">
+      <img class="animated fadeinright" alt="MRW Creations" src="/images/right-curve.png" style="height:200px; float;right; position:fixed; right:0; pointer-events: none;"
+      id="right-curve">
+      <a class="c-hamburger c-hamburger--htra open hvr-grow" onclick="openNav()" style="position:fixed; right: 10;">
+        <span></span>
+      </a>
+    </div>
   </header>
   <div id="mySidenav" class="sidenav" style="position:fixed;">
     <a href="javascript:void(0)" class="closebtn hvr-rotate" onclick="closeNav()">&times;</a>
     <div class="links">
       <ul>
-      
-      <li><img id="side-logo" alt="MRW Creations" src="/images/MRWnav.png" style="display: inline; opacity: 1; transition: 1.5s;"></li>
+
+        <li><img id="side-logo" alt="MRW Creations" src="/images/MRWnav.png" style="display: inline; opacity: 1; transition: 1.5s;"></li>
         <li> <a href="#about_us" class="hvr-grow">About </a></li>
         <li> <a href="contact-us.html" class="hvr-grow">Contact</a></li>
         <li> <a href="#schedule_meeting" class="hvr-grow">Get Started</a></li>
@@ -96,25 +112,25 @@
         <input type="text" placeholder="Client" name="uname" required>
         <input  type="password" placeholder="Passcode" name="psw" required>
         <button type="submit" class="hvr-grow" style="float:right; margin-right:50px; color:#fbf7fb;">Check In</button>
-        </div>
-        <div>
-          <input style="float:right; padding-right: 39px;"  class="fb-connect" type="image" src="/images/fb.png" >
-        </div>
+      </div>
+      <div>
+        <input style="float:right; padding-right: 39px;"  class="fb-connect" type="image" src="/images/fb.png" >
       </div>
     </div>
   </div>
-  <div class="bg-info">    
-    <div class="container">
-      <div class="notificaiton-bar"></div>
-      <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active" id="city-animation step_1">
-        <div class="heart animated infinite pulse"> 
-          <object id="EdgeID" 
-             type="text/html" 
-             width="100%" height="75%" 
-             data-dw-widget="Edge" 
-             data="/animations/city.html">
+</div>
+<div class="bg-info">    
+  <div class="container">
+    <div class="notificaiton-bar"></div>
+    <div id="carousel-example-vertical" class="carousel vertical slide" data-interval="false" data-wrap="false">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" id="city-animation step_1">
+          <div class="heart animated infinite pulse"> 
+            <object id="EdgeID" 
+            type="text/html" 
+            width="100%" height="75%" 
+            data-dw-widget="Edge" 
+            data="/animations/city.html">
           </object>
         </div>  
         <div class="homepage-content">
@@ -124,7 +140,7 @@
           </h5>    
           <div class="set-appointment">
             <div class="hvr-bob">
-                <a href="#schedule_meeting"><button>Schedule a Meeting</button></a>
+              <a href="#schedule_meeting"><button>Schedule a Meeting</button></a>
             </div>
           </div>
           <div class="animated infinite pulse next-button ">
@@ -134,45 +150,44 @@
             <small class="click_space">Press 'Space'</small>
           </div>
         </div>
-          </div>
-          <div class="item" id="step_2">
-            <div> 
-              <div class="heart animated"> 
-                <object id="EdgeID" 
-                   type="text/html" 
-                   width="100%" height="60%" 
-                   data-dw-widget="Edge" 
-                   data="/animations/table.html">
-                </object>
-                <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
-              </div> 
-              <div class="secondnextbutton">
-                <div class="animated infinite pulse next-button ">
-                  <a href="#schedule_meeting" id="show-next-page2">
-                    <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i>
-                  </a>
-                  <small class="click_space" style="font-size: 35% !important;">Press 'Space'</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item" id="#schedule_meeting">
-            <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
+      </div>
+      <div class="item" id="step_2">
+        <div> 
+          <div class="heart animated"> 
+            <object id="EdgeID" 
+            type="text/html" 
+            width="100%" height="60%" 
+            data-dw-widget="Edge" 
+            data="/animations/table.html">
+          </object>
+          <object class="services-tab" type="text/html" width="100%" height="100%" data-dw-width="Edge" data="tab.html"></object>
+        </div> 
+        <div class="secondnextbutton">
+          <div class="animated infinite pulse next-button ">
+            <a href="#schedule_meeting" id="show-next-page2">
+              <i class="animated infinite flash fa fa-angle-double-down" id="show-next-page"></i>
+            </a>
+            <small class="click_space" style="font-size: 35% !important;">Press 'Space'</small>
           </div>
         </div>
       </div>
     </div>
+    <div class="item" id="#schedule_meeting">
+      <object class="adpage" data="ad.html" type="text/html" width="100%" height="100%"></object>
+    </div>
   </div>
-  <nav id="social">
+</div>
+</div>
+</div>
+<nav id="social">
   <ul>
-  <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
-  <li><a href="https://www.messenger.com/t/MRWcreations" target="_blank">Message us <i class="fa fa-commenting"></i></a></li>
-  <li><a href="mailto:info@mrwcreations.com">Email us <i class="fa fa-envelope "></i></a></li>
+    <li><a href="tel:320-219-8802">Call us<i class="fa fa-phone "></i></a></li>
+    <li><a href="https://www.messenger.com/t/MRWcreations" target="_blank">Message us <i class="fa fa-commenting"></i></a></li>
+    <li><a href="mailto:info@mrwcreations.com">Email us <i class="fa fa-envelope "></i></a></li>
   </ul>
-  </nav>
+</nav>
 
 <script src="/js/custom.js"></script>
 <script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
- 
